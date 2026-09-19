@@ -32,6 +32,7 @@ final class DashboardServiceProvider extends ServiceProvider
 
         $this->publishes([__DIR__.'/../config/dashboard.php' => config_path('dashboard.php')], 'zerooonez-dashboard-config');
         $this->publishes([__DIR__.'/../resources/views/dashboard' => resource_path('views/vendor/zerooonez-dashboard')], 'zerooonez-dashboard-views');
+        $this->publishes([__DIR__.'/../resources/lang' => resource_path('lang/vendor/zerooonez-dashboard')], 'zerooonez-dashboard-translations');
 
         if ($this->app->runningInConsole()) {
             $this->commands([InstallDashboard::class, UpdateDashboardAssets::class, MakeDashboard::class, SyncDashboardPermissions::class]);

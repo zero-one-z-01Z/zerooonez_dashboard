@@ -8,7 +8,7 @@ use Illuminate\Filesystem\Filesystem;
 class InstallDashboard extends Command
 {
     protected $signature = 'dashboard:install {--force : Overwrite package-owned assets and published config/views}';
-    protected $description = 'Install config, optional view sources, generator directories, and dashboard assets';
+    protected $description = 'Install config, generator directories, and browser-ready dashboard assets';
 
     public function handle(Filesystem $files): int
     {

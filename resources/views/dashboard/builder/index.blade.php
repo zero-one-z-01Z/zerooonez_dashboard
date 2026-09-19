@@ -1,3 +1,11 @@
+@php
+    $dashboardRouteNamePrefix = trim((string) config('dashboard.route_name_prefix', 'admin.'), '.');
+    $dashboardRouteName = static fn (string $name): string => ($dashboardRouteNamePrefix === '' ? '' : $dashboardRouteNamePrefix.'.').$name;
+    $dashboardHomeRoute = $dashboardRouteName('home');
+    $dashboardHomeUrl = \Illuminate\Support\Facades\Route::has($dashboardHomeRoute)
+        ? route($dashboardHomeRoute)
+        : url(trim((string) config('dashboard.route_prefix', 'admin'), '/'));
+@endphp
 <!doctype html>
 <html lang="{{ app()->getLocale() === 'en' ? 'en' : 'ar' }}" dir="{{ app()->getLocale() === 'en' ? 'ltr' : 'rtl' }}">
 <head>
@@ -9,10 +17,10 @@
 </head>
 <body>
 <header class="builder-header">
-    <a class="brand" href="{{ route('admin.home') }}"><span aria-hidden="true">▦</span><span data-i18n="brand">أدوات الداشبورد</span></a>
+    <a class="brand" href="{{ $dashboardHomeUrl }}"><span aria-hidden="true">▦</span><span data-i18n="brand">أدوات الداشبورد</span></a>
     <div class="header-actions"><button class="locale-button" type="button" id="toggle-locale">EN</button><span class="local-indicator" data-i18n="local">بيئة تطوير محلية</span></div>
 </header>
-<main id="dashboard-builder" data-locale="{{ app()->getLocale() === 'en' ? 'en' : 'ar' }}" data-preview-url="{{ route('admin.dashboard-builder.preview') }}" data-generate-url="{{ route('admin.dashboard-builder.generate') }}" data-catalog-url="{{ url('/admin/dashboard-builder/catalog') }}">
+<main id="dashboard-builder" data-locale="{{ app()->getLocale() === 'en' ? 'en' : 'ar' }}" data-preview-url="{{ route($dashboardRouteName('dashboard-builder.preview')) }}" data-generate-url="{{ route($dashboardRouteName('dashboard-builder.generate')) }}" data-catalog-url="{{ route($dashboardRouteName('dashboard-builder.catalog')) }}">
     <div class="builder-hero">
         <div><p class="kicker" data-i18n="kicker">تعريف الصفحة</p><h1 data-i18n="title">ابنِ عقد الصفحة قبل أن تُنشئ ملفاتها.</h1><p data-i18n="subtitle">المعالج يوثّق الجدول والنماذج والعلاقات والعمليات؛ الحالات المركبة تُسلّم كحزمة واضحة للـAgent.</p></div>
         <div class="hero-actions"><select id="example-picker" aria-label="Example"><option value="">تحميل مثال</option><option value="simple">صفحة بسيطة</option><option value="area">منطقة وحدود</option><option value="chain">ثلاثة مستويات</option><option value="features">خصائص وأبناء</option><option value="email">أنواع بريد</option><option value="product">منتجات ووسائط</option><option value="actions">عمليات ومودالات</option></select><button class="button secondary" type="button" id="load-example">تحميل المثال</button></div>

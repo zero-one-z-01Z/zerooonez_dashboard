@@ -42,11 +42,38 @@ The command creates the configurable generator directories, keeps an existing co
 
 The published `public/dashboard` tree is installation output. Keep it out of the consuming project's source control and reproduce it with `dashboard:install` or `dashboard:update-assets` during deployment.
 
-The browser builder is disabled by default. In local development only, set `DASHBOARD_BUILDER_ENABLED=true`. Its controller additionally rejects non-loopback requests. Add authentication/authorization middleware through `dashboard.builder_middleware`; the package does not guess the consuming application's admin guard.
+The browser builder is disabled by default. In local development only, set `DASHBOARD_BUILDER_ENABLED=true`. Its controller additionally rejects non-loopback requests and then requires the configured dashboard authentication guard.
+
+## Authentication
+
+The package owns its login/logout controller, routes, views, CSRF/session handling, and dashboard middleware. It uses the consuming application's configured session guard so it does not force a user table or account model. The defaults use the Laravel `web` guard and its email/password credentials:
+
+```php
+'auth' => [
+    'enabled' => true,
+    'guard' => 'web',
+    'login_field' => 'email',
+    'login_view' => 'zerooonez-dashboard::auth.login',
+],
+```
+
+The default routes are `GET /admin/login`, `POST /admin/login`, and `POST /admin/logout`. Home, generated resources, and the enabled local builder are protected. A project that already owns admin authentication can set `dashboard.auth.enabled` to `false` and keep its existing routes/middleware. Password recovery remains a host integration because its mailer and password broker belong to the consuming project.
 
 ## Configuration seams
 
 `config/dashboard.php` controls route prefixes, middleware, permission storage, public asset path, and all generated application paths/namespaces. Generated controllers/models/definitions/routes/translations are written into the consuming project, never into `vendor`. Route files are loaded inside the package's configurable admin group and use compact `all_routes(...)` blocks.
+
+The package provides `ZeroOneZ\Dashboard\Http\Controllers\HomeController` and a standalone `admin.home` page at `/admin/home` by default. Configure it with `home_path`, `home_view`, and `home_middleware`. Set `home_enabled` to `false` when the consuming project already owns `admin.home`; projects may also override `zerooonez-dashboard::home.index` without editing the package.
+
+Never edit package files under `vendor`; Composer updates replace that directory. Package owners edit the package repository, test/build it, then publish a tagged release. Consuming projects can publish only the sources they intentionally want to override:
+
+```bash
+php artisan vendor:publish --tag=zerooonez-dashboard-views
+php artisan vendor:publish --tag=zerooonez-dashboard-translations
+php artisan vendor:publish --tag=zerooonez-dashboard-config
+```
+
+Published views live in `resources/views/vendor/zerooonez-dashboard`, and published package translations live in `resources/lang/vendor/zerooonez-dashboard`. Once published, those project copies intentionally win over the package and Composer will not overwrite them. Unpublished views/translations continue to receive package updates automatically. Browser assets are different: their compiled output must exist under `public/dashboard`, so `dashboard:update-assets` refreshes only the manifest-managed files and refuses to overwrite locally modified assets without `--force`.
 
 Set `permission_model`, `permission_table`, and `permission_key_column` for the host schema, or bind `ZeroOneZ\Dashboard\Contracts\PermissionStore` to a custom implementation. `dashboard:sync-permissions` inserts missing keys only; it never grants or removes role assignments.
 
@@ -57,6 +84,8 @@ Set `permission_model`, `permission_table`, and `permission_key_column` for the 
 - `dashboard:sync-permissions [resource]` inserts missing permission keys.
 
 The generator refuses conflicting paths and does not run migrations, seeders, or role grants. See `docs/` for the inherited dashboard contracts and examples. `examples/CityController.php` is reference-only and is not autoloaded.
+
+Generated controllers are application files under `app/Http/Controllers/Admin/Generated`. New controllers expose the familiar `inputs_list`, `update_inputs_list`, `filters`, `show_list`, `datatable_actions`, `modals`, `get_single_item`, `store`, `update`, and `delete` hooks while delegating their untouched defaults to the package runtime. They are generated once and are safe to customize in the consuming project.
 
 ## Frontend build
 

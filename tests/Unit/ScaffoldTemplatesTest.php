@@ -8,6 +8,34 @@ use ZeroOneZ\Dashboard\Tests\TestCase;
 
 final class ScaffoldTemplatesTest extends TestCase
 {
+    public function test_generated_controller_exposes_customizable_dashboard_hooks(): void
+    {
+        $definition = [
+            'resource' => 'cities',
+            'permission' => 'city',
+            'controller' => 'CityController',
+            'model' => 'City',
+            'create_model' => false,
+            'timestamps' => true,
+            'capabilities' => [
+                'create' => true, 'update' => true, 'delete' => true,
+                'delete_all' => false, 'export' => false, 'filters' => true, 'show' => false,
+            ],
+            'fields' => [],
+            'edit_mode' => 'same',
+            'edit_fields' => [],
+        ];
+
+        $files = app(ScaffoldTemplatesV2::class)->files($definition);
+        $controller = $files['app/Http/Controllers/Admin/Generated/CityController.php'];
+
+        $this->assertStringContainsString('public function inputs_list(): array', $controller);
+        $this->assertStringContainsString('public function show_list(): array', $controller);
+        $this->assertStringContainsString('public function store(Request $request)', $controller);
+        $this->assertStringContainsString('public function update(Request $request, $id)', $controller);
+        $this->assertStringContainsString('public function get_single_item($id)', $controller);
+    }
+
     public function test_route_block_is_compact_and_uses_configured_controller_namespace(): void
     {
         config()->set('dashboard.generator.controller_namespace', 'Domain\\Admin\\Generated');

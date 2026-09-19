@@ -1,10 +1,12 @@
 {
   "$schema": "https://json.schemastore.org/package.json",
   "name": "@zeroonez/zerooonez-dashboard-assets",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "private": true,
   "type": "module",
   "scripts": {
+    "build:starter": "node scripts/build-starter.mjs && node scripts/build-starter-manifest.mjs",
+    "starter-manifest": "node scripts/generate-starter-manifest.mjs",
     "build": "vite build && npm run manifest",
     "dev": "vite",
     "test": "node --test tests/JavaScript/*.test.js",

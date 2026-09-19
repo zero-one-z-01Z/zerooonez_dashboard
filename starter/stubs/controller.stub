@@ -1,0 +1,11 @@
+<?php
+
+namespace {{ controller_namespace }};
+
+class {{ model }}Controller extends \{{ base_controller }}
+{
+    protected function definition(): array
+    {
+        return $this->loadDefinition({{ resource_literal }});
+    }
+}

@@ -1,0 +1,12 @@
+{
+  "provenance/source-snapshots/README.md": "01a3aba112c1e82dd0b63df0e540eb57638f7c74724e821fd9642cc228674546",
+  "provenance/source-snapshots/controllers/AdminController.php": "86b8f48d2b3cee375b2ea2382c6771cbcb9d02c396e047821270da0bf72c3f44",
+  "provenance/source-snapshots/controllers/HomeController.php": "ae80f8a2f905f5565d3a63dff6fb8ea0457b001f8549ae513310156213c97bbd",
+  "provenance/source-snapshots/controllers/PermissionController.php": "9959a2aa75ca376d8e7debbff60665caa412da53834778f6cba297537b40414c",
+  "provenance/source-snapshots/controllers/SettingController.php": "2db476eda993df90f62e15cf78c990f45b4113c63a3fdfa0e1fb98c3fb214d73",
+  "provenance/source-snapshots/migrations/01_create_admins_table.php": "6896b89ff6d8b4cd680fc936084f4468408f1f2b8201535d5291f3d82e5c5a9e",
+  "provenance/source-snapshots/migrations/01_create_permissions_table.php": "78ff798c21684c436e96d0c548a116526b1beb56ba4026816b15897085e307e6",
+  "provenance/source-snapshots/migrations/01_create_roles_table.php": "963b60f687ebd9ed0953713347e998ec84d140871683908dcec71624d329a32a",
+  "provenance/source-snapshots/migrations/01_create_settings_table.php": "a31290443b27f036269e540a51262b411c5144f7f19e2ec9dc1c8c41983d75fe",
+  "provenance/source-snapshots/migrations/02_create_role_permissions_table.php": "7ef1869d451be4466461841cfd5aab479f004c535ed1630a5e18d4af25197f02"
+}

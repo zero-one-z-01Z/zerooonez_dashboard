@@ -1,0 +1,1 @@
+function r(n,e={}){if(typeof document>"u")return e;const t=typeof n=="string"?typeof document.getElementById=="function"?document.getElementById(n):null:n;if(!t)return e;try{return JSON.parse(t.textContent||"")}catch(o){return console.error(`Invalid dashboard JSON config: ${t.id||"anonymous"}`,o),e}}function d(){return r("dashboard-runtime-config",{})}export{d,r};

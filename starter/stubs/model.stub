@@ -1,0 +1,17 @@
+<?php
+
+namespace {{ model_namespace }};
+
+use Illuminate\Database\Eloquent\Model;
+
+class {{ model }} extends Model
+{
+    protected $table = {{ table }};
+    protected $fillable = {{ fillable }};
+    public $timestamps = {{ timestamps }};
+
+    protected function casts(): array
+    {
+        return {{ casts }};
+    }
+}

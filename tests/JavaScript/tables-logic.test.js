@@ -10,6 +10,7 @@ import { buildColumns, renderColumn } from '../../resources/js/back/tables/colum
 import { escapeHtml, renderToggleText } from '../../resources/js/back/tables/text.js';
 import { dataColumnIndexes } from '../../resources/js/back/tables/lifecycle.js';
 import { formatExportCell, buildToolbarButtons } from '../../resources/js/back/datatables/toolbar.js';
+import { toolbarLabel } from '../../resources/js/back/tables/lifecycle.js';
 
 test('configuration intersects permissions, supports open, maps filters, and preserves route contract', () => {
     const data = {
@@ -146,4 +147,10 @@ test('export formats share the same formatter and accept numeric or empty cells'
     const [collection] = buildToolbarButtons({ have_export: true });
     assert.deepEqual(collection.buttons.map(button => button.extend), ['print', 'csv', 'excel', 'copy']);
     assert.ok(collection.buttons.every(button => button.exportOptions.format.body === formatExportCell));
+});
+
+test('toolbar labels use DOM-node text instead of coercing nodes to object strings', () => {
+    assert.equal(toolbarLabel({ textContent: 'Add city' }), 'Add city');
+    assert.equal(toolbarLabel('Export'), 'Export');
+    assert.equal(toolbarLabel(null), '');
 });

@@ -33,5 +33,7 @@ return [
         'definition_path' => 'dashboard/resources',
         'routes_path' => 'routes/admin-generated',
         'translations_path' => 'resources/lang',
+        // Package tests render against the checked-in templates; installed source uses base_path('stubs').
+        'stubs_path' => dirname(__DIR__).'/stubs',
     ],
 ];

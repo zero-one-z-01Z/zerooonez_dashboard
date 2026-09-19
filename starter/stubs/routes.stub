@@ -1,0 +1,9 @@
+<?php
+
+use {{ controller_namespace }}\{{ model }}Controller;
+use Illuminate\Support\Facades\Route;
+
+Route::prefix({{ resource }})->name({{ route_name }})->controller({{ model }}Controller::class)
+    ->middleware({{ view_permission }})->group(function () {
+        all_routes({{ permission }});
+    });

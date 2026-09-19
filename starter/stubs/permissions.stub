@@ -1,0 +1,16 @@
+<?php
+
+namespace Database\Seeders;
+
+use App\Dashboard\Contracts\PermissionStore;
+use Illuminate\Database\Seeder;
+
+class {{ model }}DashboardPermissionsSeeder extends Seeder
+{
+    public function run(): void
+    {
+        foreach (['view', 'create', 'update', 'delete'] as $action) {
+            app(PermissionStore::class)->firstOrCreate($action.{{ permission_suffix }});
+        }
+    }
+}

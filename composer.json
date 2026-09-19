@@ -1,7 +1,7 @@
 {
     "$schema": "https://getcomposer.org/schema.json",
     "name": "zeroonez/zerooonez-dashboard",
-    "description": "Reusable internal Laravel dashboard runtime, builder and scaffolding toolkit.",
+    "description": "Source installer for the ZeroOneZ Laravel dashboard starter.",
     "type": "library",
     "license": "proprietary",
     "require": {
@@ -13,8 +13,7 @@
         "phpunit/phpunit": "^11.5"
     },
     "autoload": {
-        "psr-4": {"ZeroOneZ\\Dashboard\\": "src/"},
-        "files": ["src/helpers.php"]
+        "psr-4": {"ZeroOneZ\\Dashboard\\": "src/"}
     },
     "autoload-dev": {
         "psr-4": {"ZeroOneZ\\Dashboard\\Tests\\": "tests/"}

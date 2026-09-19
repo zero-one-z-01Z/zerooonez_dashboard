@@ -166,7 +166,7 @@ final class ScaffoldTemplates
      */
     private function render(string $stub, array $replacements): string
     {
-        $path = dirname(__DIR__, 3).'/stubs/'.$stub.'.stub';
+        $path = rtrim((string) config('dashboard.generator.stubs_path', dirname(__DIR__, 3).'/stubs'), '/').'/'.$stub.'.stub';
         $contents = file_get_contents($path);
         if ($contents === false) {
             throw new RuntimeException('تعذّر قراءة قالب الداشبورد: '.$stub);

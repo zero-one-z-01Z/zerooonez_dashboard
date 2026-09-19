@@ -3,34 +3,25 @@
 namespace ZeroOneZ\Dashboard\Console\Commands;
 
 use Illuminate\Console\Command;
-use Illuminate\Filesystem\Filesystem;
+use ZeroOneZ\Dashboard\Services\Installation\InstallationService;
 
 class InstallDashboard extends Command
 {
-    protected $signature = 'dashboard:install {--force : Overwrite package-owned assets and published config/views}';
-    protected $description = 'Install config, generator directories, and browser-ready dashboard assets';
+    protected $signature = 'dashboard:install {--force : Back up and overwrite conflicting source files} {--dry-run : Show what would be installed without writing files}';
+    protected $description = 'Install the dashboard source payload into this Laravel application';
 
-    public function handle(Filesystem $files): int
+    public function handle(): int
     {
-        $root = dirname(__DIR__, 3);
-        $force = (bool) $this->option('force');
-        $copies = [
-            $root.'/config/dashboard.php' => config_path('dashboard.php'),
-        ];
-        foreach ($copies as $source => $target) {
-            if (is_file($target) && ! $force) {
-                $this->line('Kept existing '.$target);
-                continue;
-            }
-            $files->ensureDirectoryExists(dirname($target));
-            $files->copy($source, $target);
-        }
-        foreach (['definition_path', 'routes_path'] as $key) {
-            $files->ensureDirectoryExists(base_path(trim((string) config('dashboard.generator.'.$key), '/')));
-        }
-        $exit = $this->call('dashboard:update-assets', $force ? ['--force' => true] : []);
-        $this->newLine();
-        $this->info('Dashboard installed. Enable the local builder explicitly with DASHBOARD_BUILDER_ENABLED=true.');
-        return $exit;
+        return $this->executeInstallation(new InstallationService(dirname(__DIR__, 3), base_path()), false);
+    }
+
+    private function executeInstallation(InstallationService $installer, bool $update): int
+    {
+        try { $result = $update ? $installer->update((bool) $this->option('force'), (bool) $this->option('dry-run')) : $installer->install((bool) $this->option('force'), (bool) $this->option('dry-run')); }
+        catch (\Throwable $exception) { $this->error($exception->getMessage()); return self::FAILURE; }
+        $this->info(sprintf('Written %d; adopted %d; unchanged %d; conflicts %d.', count($result->written), count($result->adopted), count($result->unchanged), count($result->conflicts)));
+        foreach ($result->conflicts as $file) $this->warn('Preserved modified file: '.$file);
+        if ($result->providerRegistered) $this->line('Registered App\\Providers\\DashboardServiceProvider.');
+        return $result->hasConflicts() ? self::FAILURE : self::SUCCESS;
     }
 }

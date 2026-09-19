@@ -1,7 +1,7 @@
 {
   "algorithm": "sha256",
   "files": {
-    "build/.vite/manifest.json": "1d6fbdd2f56315f5e310bf016aded9668cdef86a8c65cd1b1bfef290a159df72",
+    "build/.vite/manifest.json": "c12b9e43aad8b6c920829e1fbfc7bea1aecf1e39d624c02002e49a8f0c2acba4",
     "build/assets/builder-C4myneZq.js": "3b7071485c4324877ea7886697840520d6f06e8404029911e7f6710d60c153b1",
     "build/assets/chat-Bn1mDyUI.js": "36f7f144f4fd57f722b0911a33c7a36091e06c5e2d2922eddee747426a9f76d4",
     "build/assets/config-CwI8Qv8x.js": "2c944e67a790aaf776a96a944fa2b97dbc7aa413207e230f742ed85a5aeac264",
@@ -10,11 +10,11 @@
     "build/assets/dashboard-builder-DcA3wHO3.css": "2c35d428eab377249d29187b8fcd08a7502ffd6bb1a09f8a68573ba65b699fdf",
     "build/assets/datatable-init-CvfgHtER.js": "ef3663ded6d6a011af77ab8cd56173fcadc4f2631cd2e154380a0d82c3fca409",
     "build/assets/home-DiXKOUdO.js": "34ab7d21b1cd2a498076f0680cce897b06d09d31f1db204ed848c2883d582193",
-    "build/assets/item-table-CV0SCByO.js": "f10b4595088eed8e1ee927cebb6d5b6a2cd4c54407a69dfab553ccfa1d9e6193",
+    "build/assets/item-table-BP0AfB3e.js": "6c74853799f86b63904f674b6679bb334b0a9fc079e815a1e714a8a4099398ff",
     "build/assets/login-uE1P6z3k.js": "d20d8d356edbf2a940ce847c7d10a6a35155b2c6f7b6fbdd4b26ae2ccff07d0b",
-    "build/assets/page-table-BFju5-2X.js": "9686130b3e517b54c234c549c74fac1afe03ce6c8f246ad007a71640dd81f4f8",
+    "build/assets/page-table-Dlfo20_u.js": "c105b3292b0ed737ec490053a114af928c8e3f5781834ea702b6d403c614416a",
     "build/assets/settings-BBVNIOVI.js": "7c1eb46cc22ee2d3566afc67cbf1aadeb26322c46c7cb1f1ea3270d3df8ddfbc",
-    "build/assets/table-CfHrUUYc.js": "9d6bfc8e8fe70be2a57c233f8b7045d06e5de03a05a0af5c0c54e2b0e0337161",
+    "build/assets/table-Bxa0UdyH.js": "18adb729fc128cdaa3bf141f6775de745e453897df567ddc6ecee8011e37c560",
     "dashboard/auth/css/bootstrap.min.css": "f1fbb34bb783352e94cd0ce5fe429388e0fa98c9723062407d67cc5a79b9cf70",
     "dashboard/auth/css/bootstrap/_media.css": "cbb7273f7ca655eb3be1d0a0e54fc0b5fb89ac7277827d4f9df0806d47dfa957",
     "dashboard/auth/css/bootstrap/mixins/_border-radius.css": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",

@@ -66,8 +66,8 @@
         window.all_permissions = {!! json_encode($all_permissions) !!};
 
         @endif
-        const langRouteBase = "{{ $change_lang_url }}";
-            window.show_password_modal = {!! $show_password !!};
+        window.langRouteBase = @json($change_lang_url);
+        window.show_password_modal = @json((bool) $show_password);
         window.current_direction = "{{app()->getLocale()=='ar'?'rtl':'ltr'}}";
     </script>
     <script src="{{asset('dashboard/')}}/vendor/js/helpers.js"></script>
@@ -154,5 +154,4 @@
 </body>
 
 </html>
-
 

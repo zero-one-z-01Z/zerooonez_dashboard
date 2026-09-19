@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "package_version": "0.2.0",
+  "package_version": "0.2.1",
   "files": [
     {
       "source": "starter/app/Console/Commands/CreateDashboardAdmin.php",
@@ -1635,7 +1635,7 @@
     {
       "source": "starter/public/dashboard/js/main.js",
       "target": "public/dashboard/js/main.js",
-      "sha256": "60397bc5dd6d935185c9f327433dbc60d870546c81e0d1f0da4ae1d010e952e4"
+      "sha256": "4a223e804d000a93776fcf560968a1f25aa345247ea4fa808caf86811f3dcb20"
     },
     {
       "source": "starter/public/dashboard/js/modal-add-permission.js",
@@ -3035,7 +3035,7 @@
     {
       "source": "starter/resources/views/dashboard/layout/admin-main-layout.blade.php",
       "target": "resources/views/dashboard/layout/admin-main-layout.blade.php",
-      "sha256": "63694897d66ed71405412e69b34fefc29feed318e24db13067ece34c8f16115a"
+      "sha256": "e2ea3c3a665b4fd34c6f335583ab823955d3b4e1ecebbcdf5773d4b92500935d"
     },
     {
       "source": "starter/resources/views/dashboard/layout/auth-layout.blade.php",

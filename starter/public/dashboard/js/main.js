@@ -78,8 +78,8 @@ let menu, animate, isHorizontalLayout = !1,
             for (let e = 0; e < s.length; e++) s[e].addEventListener("click", function () {
 
                 let a = this.getAttribute("data-language"), o = this.getAttribute("data-text-direction");
-                if(firstTime){
-                    const langUrl = langRouteBase.replace('__lang__', a); // where `a` = 'ar' or 'en'
+                if(firstTime && typeof window.langRouteBase === 'string'){
+                    const langUrl = window.langRouteBase.replace('__lang__', a); // where `a` = 'ar' or 'en'
                     window.location.href = langUrl;
                 }
                 firstTime = true;
@@ -298,4 +298,3 @@ function initializeAutocomplete() {
 document.addEventListener("keydown", e => {
     (e.ctrlKey || e.metaKey) && "k" === e.key && (e.preventDefault(), document.querySelector(".aa-DetachedSearchButton").click())
 }), document.documentElement.querySelector("#autocomplete") && loadSearchData();
-

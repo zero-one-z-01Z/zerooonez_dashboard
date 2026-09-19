@@ -1,0 +1,2200 @@
+{
+  "date": "2026-09-08",
+  "scope": "All resources/js/back/**/*.js, including item-tables owned by the parent agent",
+  "baseline": ".dashboard-documentation-before",
+  "method": {
+    "parser": "rollup/parseAst",
+    "comparison": "Deep equality of JavaScript ASTs after removing source offsets start/end and raw literal spelling; semantic literal values remain compared. Comments do not enter this AST.",
+    "documentation": "Arabic JSDoc before named function declarations, variable-assigned functions and named object-property or assignment callbacks; returns required, params required when parameters exist. Anonymous callbacks not counted as named functions; separately inspect callbacks registered by jQuery validator.addMethod."
+  },
+  "summary": {
+    "jsFiles": 53,
+    "astEquivalentFiles": 53,
+    "changedSourceFiles": 46,
+    "namedFunctions": 170,
+    "propertyOrAssignmentCallbacks": 46,
+    "registeredValidationCallbacks": 10,
+    "uniqueValidationRuleNames": 9,
+    "undocumented": 0
+  },
+  "files": [
+    {
+      "file": "resources/js/back/builder.js",
+      "sourceChanged": true,
+      "astEquivalent": true,
+      "baselineSha256": "eb285192acf6954e2eb8c7101c9610c32e536653a5f2523ab467260d4ef956e3",
+      "documentedSha256": "5e0ce1837d1a38f64d3ea710017a6bcfc4b0c8c7f0be9bfaf0cf092a91f19477",
+      "namedFunctions": [
+        {
+          "name": "initializeBuilder",
+          "line": 11,
+          "arabicJSDoc": true,
+          "documentsReturn": true,
+          "documentsParameters": true
+        },
+        {
+          "name": "invalidate",
+          "line": 25,
+          "arabicJSDoc": true,
+          "documentsReturn": true,
+          "documentsParameters": true
+        },
+        {
+          "name": "setBusy",
+          "line": 37,
+          "arabicJSDoc": true,
+          "documentsReturn": true,
+          "documentsParameters": true
+        },
+        {
+          "name": "report",
+          "line": 49,
+          "arabicJSDoc": true,
+          "documentsReturn": true,
+          "documentsParameters": true
+        }
+      ],
+      "propertyOrAssignmentCallbacks": [],
+      "registeredValidationCallbacks": []
+    },
+    {
+      "file": "resources/js/back/builder/api.js",
+      "sourceChanged": true,
+      "astEquivalent": true,
+      "baselineSha256": "635865ef920d8012e76c889d234275f1f4811394d749b40178c5dc5975de40bc",
+      "documentedSha256": "c62450775e5e032723432560a8d3768d1f11366f148643092f0ab0543e1c4ca3",
+      "namedFunctions": [
+        {
+          "name": "sendDefinition",
+          "line": 10,
+          "arabicJSDoc": true,
+          "documentsReturn": true,
+          "documentsParameters": true
+        }
+      ],
+      "propertyOrAssignmentCallbacks": [],
+      "registeredValidationCallbacks": []
+    },
+    {
+      "file": "resources/js/back/builder/editor.js",
+      "sourceChanged": true,
+      "astEquivalent": true,
+      "baselineSha256": "b1772e387cb4acd3226571e6b13842d060ec2d34e93c84b453d8bee6f784fbd5",
+      "documentedSha256": "0b776d664758faa4216d0ee9e1350ef25aef0b76e00679a7f0eb16e09d52ddae",
+      "namedFunctions": [
+        {
+          "name": "readControl",
+          "line": 10,
+          "arabicJSDoc": true,
+          "documentsReturn": true,
+          "documentsParameters": true
+        },
+        {
+          "name": "readDefinition",
+          "line": 19,
+          "arabicJSDoc": true,
+          "documentsReturn": true,
+          "documentsParameters": true
+        },
+        {
+          "name": "addField",
+          "line": 38,
+          "arabicJSDoc": true,
+          "documentsReturn": true,
+          "documentsParameters": true
+        },
+        {
+          "name": "numberFields",
+          "line": 63,
+          "arabicJSDoc": true,
+          "documentsReturn": true,
+          "documentsParameters": true
+        },
+        {
+          "name": "fillDefinition",
+          "line": 75,
+          "arabicJSDoc": true,
+          "documentsReturn": true,
+          "documentsParameters": true
+        },
+        {
+          "name": "downloadDefinition",
+          "line": 96,
+          "arabicJSDoc": true,
+          "documentsReturn": true,
+          "documentsParameters": true
+        }
+      ],
+      "propertyOrAssignmentCallbacks": [],
+      "registeredValidationCallbacks": []
+    },
+    {
+      "file": "resources/js/back/builder/preview.js",
+      "sourceChanged": true,
+      "astEquivalent": true,
+      "baselineSha256": "c2fbbf943d709af79eb3191da17ed5a43c95a5cb3c1e0cba4122e56909c9cfab",
+      "documentedSha256": "a73fade1a221b1862cd5a954be3eb89623581eec6574b7e838c9d1e17090453f",
+      "namedFunctions": [
+        {
+          "name": "renderFiles",
+          "line": 8,
+          "arabicJSDoc": true,
+          "documentsReturn": true,
+          "documentsParameters": true
+        },
+        {
+          "name": "renderNextSteps",
+          "line": 31,
+          "arabicJSDoc": true,
+          "documentsReturn": true,
+          "documentsParameters": true
+        },
+        {
+          "name": "showStatus",
+          "line": 53,
+          "arabicJSDoc": true,
+          "documentsReturn": true,
+          "documentsParameters": true
+        }
+      ],
+      "propertyOrAssignmentCallbacks": [],
+      "registeredValidationCallbacks": []
+    },
+    {
+      "file": "resources/js/back/crud.js",
+      "sourceChanged": false,
+      "astEquivalent": true,
+      "baselineSha256": "b317700aa2d6aa9c5cf9afe05b6c6993dc6fd6e4145f178acef90ed5b7c8375a",
+      "documentedSha256": "b317700aa2d6aa9c5cf9afe05b6c6993dc6fd6e4145f178acef90ed5b7c8375a",
+      "namedFunctions": [],
+      "propertyOrAssignmentCallbacks": [],
+      "registeredValidationCallbacks": []
+    },
+    {
+      "file": "resources/js/back/datatable-init.js",
+      "sourceChanged": false,
+      "astEquivalent": true,
+      "baselineSha256": "3f532073b61dc7a6e324f62def25c7e7e47d4bf1d9de4ff0f9d58402967fabcb",
+      "documentedSha256": "3f532073b61dc7a6e324f62def25c7e7e47d4bf1d9de4ff0f9d58402967fabcb",
+      "namedFunctions": [],
+      "propertyOrAssignmentCallbacks": [],
+      "registeredValidationCallbacks": []
+    },
+    {
+      "file": "resources/js/back/datatables/actions.js",
+      "sourceChanged": true,
+      "astEquivalent": true,
+      "baselineSha256": "62b4d26708401ee6a8cc2514cd0f7689538a2a3ad721732205c78013b0de4a68",
+      "documentedSha256": "bfa98326c6725339946ce73ae94cacc4891949cd06e173d56d8f89c8ad9b9688",
+      "namedFunctions": [
+        {
+          "name": "hasPermission",
+          "line": 12,
+          "arabicJSDoc": true,
+          "documentsReturn": true,
+          "documentsParameters": true
+        },
+        {
+          "name": "isActionVisible",
+          "line": 23,
+          "arabicJSDoc": true,
+          "documentsReturn": true,
+          "documentsParameters": true
+        },
+        {
+          "name": "renderAction",
+          "line": 34,
+          "arabicJSDoc": true,
+          "documentsReturn": true,
+          "documentsParameters": true
+        },
+        {
+          "name": "renderActions",
+          "line": 64,
+          "arabicJSDoc": true,
+          "documentsReturn": true,
+          "documentsParameters": true
+        },
+        {
+          "name": "buildColumnDefinitions",
+          "line": 79,
+          "arabicJSDoc": true,
+          "documentsReturn": true,
+          "documentsParameters": true
+        }
+      ],
+      "propertyOrAssignmentCallbacks": [
+        {
+          "name": "render",
+          "line": 85,
+          "arabicJSDoc": true,
+          "documentsReturn": true,
+          "documentsParameters": true
+        },
+        {
+          "name": "render",
+          "line": 95,
+          "arabicJSDoc": true,
+          "documentsReturn": true,
+          "documentsParameters": true
+        },
+        {
+          "name": "render",
+          "line": 107,
+          "arabicJSDoc": true,
+          "documentsReturn": true,
+          "documentsParameters": true
+        }
+      ],
+      "registeredValidationCallbacks": []
+    },
+    {
+      "file": "resources/js/back/datatables/deletion.js",
+      "sourceChanged": true,
+      "astEquivalent": true,
+      "baselineSha256": "73e2150a65a1ebd12f674135b198c025b67bfb960b2ffc081433e3214d57d05b",
+      "documentedSha256": "35c0c8471bf58780a547829076d3b1686d15f9ab165c6b43771e8669dec07c93",
+      "namedFunctions": [
+        {
+          "name": "deleteButton",
+          "line": 9,
+          "arabicJSDoc": true,
+          "documentsReturn": true,
+          "documentsParameters": true
+        },
+        {
+          "name": "deleteAll",
+          "line": 21,
+          "arabicJSDoc": true,
+          "documentsReturn": true,
+          "documentsParameters": true
+        },
+        {
+          "name": "bindRowSelection",
+          "line": 51,
+          "arabicJSDoc": true,
+          "documentsReturn": true,
+          "documentsParameters": true
+        }
+      ],
+      "propertyOrAssignmentCallbacks": [
+        {
+          "name": "success",
+          "line": 33,
+          "arabicJSDoc": true,
+          "documentsReturn": true,
+          "documentsParameters": true
+        },
+        {
+          "name": "error",
+          "line": 43,
+          "arabicJSDoc": true,
+          "documentsReturn": true,
+          "documentsParameters": true
+        }
+      ],
+      "registeredValidationCallbacks": []
+    },
+    {
+      "file": "resources/js/back/datatables/engine.js",
+      "sourceChanged": true,
+      "astEquivalent": true,
+      "baselineSha256": "56237f83c365c514a4a9f1bcb5cef0f8002d034c1e844be6247ac75f1ef9970b",
+      "documentedSha256": "564ef30951ee6638542f93c92765f161dc5eb4af0442c3fdff237195a8e8a896",
+      "namedFunctions": [
+        {
+          "name": "readFilterElement",
+          "line": 13,
+          "arabicJSDoc": true,
+          "documentsReturn": true,
+          "documentsParameters": true
+        },
+        {
+          "name": "initializeDataTable",
+          "line": 28,
+          "arabicJSDoc": true,
+          "documentsReturn": true,
+          "documentsParameters": true
+        }
+      ],
+      "propertyOrAssignmentCallbacks": [
+        {
+          "name": "drawCallback",
+          "line": 36,
+          "arabicJSDoc": true,
+          "documentsReturn": true,
+          "documentsParameters": true
+        },
+        {
+          "name": "data",
+          "line": 43,
+          "arabicJSDoc": true,
+          "documentsReturn": true,
+          "documentsParameters": true
+        }
+      ],
+      "registeredValidationCallbacks": []
+    },
+    {
+      "file": "resources/js/back/datatables/filter-values.js",
+      "sourceChanged": true,
+      "astEquivalent": true,
+      "baselineSha256": "61acbeae2ffdaaf6a2bf1155785e607d9147b55c23d62c4103d9338cdddbe37f",
+      "documentedSha256": "f8a3f44afe0cf3f6be32507a8ca555b82639a8fa7dd2a75d98536915870de18b",
+      "namedFunctions": [
+        {
+          "name": "buildRequestFilters",
+          "line": 10,
+          "arabicJSDoc": true,
+          "documentsReturn": true,
+          "documentsParameters": true
+        }
+      ],
+      "propertyOrAssignmentCallbacks": [],
+      "registeredValidationCallbacks": []
+    },
+    {
+      "file": "resources/js/back/datatables/filters.js",
+      "sourceChanged": true,
+      "astEquivalent": true,
+      "baselineSha256": "cbfba969b5f6009c497ae90ad15824f457d76aa0a610cadeab454fa8806ff9d1",
+      "documentedSha256": "02816612202392ccae879a61e9674ebd40386f0955e9f519a805b599d9c50d04",
+      "namedFunctions": [
+        {
+          "name": "closeFilterModal",
+          "line": 9,
+          "arabicJSDoc": true,
+          "documentsReturn": true,
+          "documentsParameters": true
+        },
+        {
+          "name": "clearInput",
+          "line": 20,
+          "arabicJSDoc": true,
+          "documentsReturn": true,
+          "documentsParameters": true
+        },
+        {
+          "name": "placeFilterBadges",
+          "line": 29,
+          "arabicJSDoc": true,
+          "documentsReturn": true,
+          "documentsParameters": true
+        },
+        {
+          "name": "clickFilterBadge",
+          "line": 50,
+          "arabicJSDoc": true,
+          "documentsReturn": true,
+          "documentsParameters": true
+        },
+        {
+          "name": "clearFilters",
+          "line": 62,
+          "arabicJSDoc": true,
+          "documentsReturn": true,
+          "documentsParameters": true
+        },
+        {
+          "name": "bindFilterControls",
+          "line": 73,
+          "arabicJSDoc": true,
+          "documentsReturn": true,
+          "documentsParameters": true
+        },
+        {
+          "name": "displayDateRange",
+          "line": 97,
+          "arabicJSDoc": true,
+          "documentsReturn": true,
+          "documentsParameters": true
+        },
+        {
+          "name": "initializeDateRange",
+          "line": 105,
+          "arabicJSDoc": true,
+          "documentsReturn": true,
+          "documentsParameters": true
+        }
+      ],
+      "propertyOrAssignmentCallbacks": [],
+      "registeredValidationCallbacks": []
+    },
+    {
+      "file": "resources/js/back/datatables/maps.js",
+      "sourceChanged": true,
+      "astEquivalent": true,
+      "baselineSha256": "74e52d8c86c25bb6a7b341bf8dc5a443bf028daf3e327bb9933a5669b4359a32",
+      "documentedSha256": "441a1ed10d3d788903f6dfa1882439f4bb4c3f97866e408e465e41e1a3761fcb",
+      "namedFunctions": [
+        {
+          "name": "updateBoundaryCoordinates",
+          "line": 11,
+          "arabicJSDoc": true,
+          "documentsReturn": true,
+          "documentsParameters": true
+        },
+        {
+          "name": "initializeBoundaryMap",
+          "line": 20,
+          "arabicJSDoc": true,
+          "documentsReturn": true,
+          "documentsParameters": true
+        },
+        {
+          "name": "writeLocation",
+          "line": 44,
+          "arabicJSDoc": true,
+          "documentsReturn": true,
+          "documentsParameters": true
+        },
+        {
+          "name": "initMap",
+          "line": 55,
+          "arabicJSDoc": true,
+          "documentsReturn": true,
+          "documentsParameters": true
+        },
+        {
+          "name": "updateMarkerAndMap",
+          "line": 74,
+          "arabicJSDoc": true,
+          "documentsReturn": true,
+          "documentsParameters": true
+        }
+      ],
+      "propertyOrAssignmentCallbacks": [],
+      "registeredValidationCallbacks": []
+    },
+    {
+      "file": "resources/js/back/datatables/modals.js",
+      "sourceChanged": true,
+      "astEquivalent": true,
+      "baselineSha256": "5ecbcb5eb5d9f70b9780d38c91a85bbdd562b0d23e33630f7b63a2f4109f6c1a",
+      "documentedSha256": "aeee5f76787ef173ce56ace73f232db439c5ff5dc5a1b321d01df5fd17b3091e",
+      "namedFunctions": [
+        {
+          "name": "initializeCreateDropzone",
+          "line": 9,
+          "arabicJSDoc": true,
+          "documentsReturn": true,
+          "documentsParameters": true
+        },
+        {
+          "name": "openCreateModal",
+          "line": 29,
+          "arabicJSDoc": true,
+          "documentsReturn": true,
+          "documentsParameters": true
+        },
+        {
+          "name": "showImportModal",
+          "line": 42,
+          "arabicJSDoc": true,
+          "documentsReturn": true,
+          "documentsParameters": true
+        },
+        {
+          "name": "showAddModal",
+          "line": 50,
+          "arabicJSDoc": true,
+          "documentsReturn": true,
+          "documentsParameters": true
+        }
+      ],
+      "propertyOrAssignmentCallbacks": [],
+      "registeredValidationCallbacks": []
+    },
+    {
+      "file": "resources/js/back/datatables/toolbar.js",
+      "sourceChanged": true,
+      "astEquivalent": true,
+      "baselineSha256": "10455d239ee53cc08c41235cd371c729b692d8020afd848b75a8c027fc5408f0",
+      "documentedSha256": "a2b95d4343e48feaa2385e279f529cac1ebde3644178800289edaa53e44ba48c",
+      "namedFunctions": [
+        {
+          "name": "formatExportCell",
+          "line": 10,
+          "arabicJSDoc": true,
+          "documentsReturn": true,
+          "documentsParameters": true
+        },
+        {
+          "name": "customizePrint",
+          "line": 27,
+          "arabicJSDoc": true,
+          "documentsReturn": true,
+          "documentsParameters": true
+        },
+        {
+          "name": "exportButton",
+          "line": 46,
+          "arabicJSDoc": true,
+          "documentsReturn": true,
+          "documentsParameters": true
+        },
+        {
+          "name": "buildToolbarButtons",
+          "line": 64,
+          "arabicJSDoc": true,
+          "documentsReturn": true,
+          "documentsParameters": true
+        }
+      ],
+      "propertyOrAssignmentCallbacks": [
+        {
+          "name": "action",
+          "line": 71,
+          "arabicJSDoc": true,
+          "documentsReturn": true,
+          "documentsParameters": true
+        },
+        {
+          "name": "action",
+          "line": 78,
+          "arabicJSDoc": true,
+          "documentsReturn": true,
+          "documentsParameters": true
+        },
+        {
+          "name": "action",
+          "line": 84,
+          "arabicJSDoc": true,
+          "documentsReturn": true,
+          "documentsParameters": true
+        }
+      ],
+      "registeredValidationCallbacks": []
+    },
+    {
+      "file": "resources/js/back/datatables/urls.js",
+      "sourceChanged": true,
+      "astEquivalent": true,
+      "baselineSha256": "f48bb66ba372b7379a4cf79553a90d474be9e7a8956f421521fb100d116d9230",
+      "documentedSha256": "ea8bc81b3224eb3352971c95b5a2cdd3672aebea2743e6d54676f8848673b632",
+      "namedFunctions": [
+        {
+          "name": "replaceUrlPlaceholderV2",
+          "line": 9,
+          "arabicJSDoc": true,
+          "documentsReturn": true,
+          "documentsParameters": true
+        },
+        {
+          "name": "replaceUrlPlaceholder",
+          "line": 19,
+          "arabicJSDoc": true,
+          "documentsReturn": true,
+          "documentsParameters": true
+        }
+      ],
+      "propertyOrAssignmentCallbacks": [],
+      "registeredValidationCallbacks": []
+    },
+    {
+      "file": "resources/js/back/forms/ajax.js",
+      "sourceChanged": true,
+      "astEquivalent": true,
+      "baselineSha256": "a0925c8c422118ca674ca29fc07fb5e583c3ba0dd068dcca01dcbcc71853ee59",
+      "documentedSha256": "ba5af2f3286c0f50338fdc2853f1101e29edfd114b911245e3d48b6a0b730c27",
+      "namedFunctions": [
+        {
+          "name": "configureAjax",
+          "line": 10,
+          "arabicJSDoc": true,
+          "documentsReturn": true,
+          "documentsParameters": true
+        },
+        {
+          "name": "ajax_exe",
+          "line": 23,
+          "arabicJSDoc": true,
+          "documentsReturn": true,
+          "documentsParameters": true
+        }
+      ],
+      "propertyOrAssignmentCallbacks": [
+        {
+          "name": "error",
+          "line": 59,
+          "arabicJSDoc": true,
+          "documentsReturn": true,
+          "documentsParameters": true
+        },
+        {
+          "name": "beforeSend",
+          "line": 91,
+          "arabicJSDoc": true,
+          "documentsReturn": true,
+          "documentsParameters": true
+        },
+        {
+          "name": "complete",
+          "line": 99,
+          "arabicJSDoc": true,
+          "documentsReturn": true,
+          "documentsParameters": true
+        }
+      ],
+      "registeredValidationCallbacks": []
+    },
+    {
+      "file": "resources/js/back/forms/date-range.js",
+      "sourceChanged": true,
+      "astEquivalent": true,
+      "baselineSha256": "3304c3a0237597494db80a83c26854100c6fc6262dc6ce175762001b7802e3c6",
+      "documentedSha256": "a603c0b79d447b6b2da9c7b8b58df2cec191b88aa9beef0f657dabedc5289451",
+      "namedFunctions": [
+        {
+          "name": "initializeBookingRange",
+          "line": 7,
+          "arabicJSDoc": true,
+          "documentsReturn": true,
+          "documentsParameters": true
+        },
+        {
+          "name": "booking_range",
+          "line": 18,
+          "arabicJSDoc": true,
+          "documentsReturn": true,
+          "documentsParameters": true
+        }
+      ],
+      "propertyOrAssignmentCallbacks": [],
+      "registeredValidationCallbacks": []
+    },
+    {
+      "file": "resources/js/back/forms/events.js",
+      "sourceChanged": true,
+      "astEquivalent": true,
+      "baselineSha256": "ea7f9693e03aae434c7fdaebcdc9cbf9f5cad8f9606305ecdfbdff751f56e0c5",
+      "documentedSha256": "8df6e10d8cb782c2564a5d6cec2492d3ce268ebc816b4b20ca927a60fd0f9fff",
+      "namedFunctions": [
+        {
+          "name": "initializeFormPage",
+          "line": 16,
+          "arabicJSDoc": true,
+          "documentsReturn": true,
+          "documentsParameters": true
+        },
+        {
+          "name": "resetModalForm",
+          "line": 25,
+          "arabicJSDoc": true,
+          "documentsReturn": true,
+          "documentsParameters": true
+        },
+        {
+          "name": "resetClosingModal",
+          "line": 34,
+          "arabicJSDoc": true,
+          "documentsReturn": true,
+          "documentsParameters": true
+        },
+        {
+          "name": "registerFormReady",
+          "line": 44,
+          "arabicJSDoc": true,
+          "documentsReturn": true,
+          "documentsParameters": true
+        },
+        {
+          "name": "submitCustomSwitch",
+          "line": 58,
+          "arabicJSDoc": true,
+          "documentsReturn": true,
+          "documentsParameters": true
+        },
+        {
+          "name": "registerSwitchReady",
+          "line": 71,
+          "arabicJSDoc": true,
+          "documentsReturn": true,
+          "documentsParameters": true
+        },
+        {
+          "name": "dispatchDeclaredAction",
+          "line": 81,
+          "arabicJSDoc": true,
+          "documentsReturn": true,
+          "documentsParameters": true
+        },
+        {
+          "name": "defineEvents",
+          "line": 92,
+          "arabicJSDoc": true,
+          "documentsReturn": true,
+          "documentsParameters": true
+        },
+        {
+          "name": "permissionGroup",
+          "line": 105,
+          "arabicJSDoc": true,
+          "documentsReturn": true,
+          "documentsParameters": true
+        },
+        {
+          "name": "toggleFormPermissions",
+          "line": 114,
+          "arabicJSDoc": true,
+          "documentsReturn": true,
+          "documentsParameters": true
+        },
+        {
+          "name": "synchronizePermissionToggle",
+          "line": 124,
+          "arabicJSDoc": true,
+          "documentsReturn": true,
+          "documentsParameters": true
+        },
+        {
+          "name": "registerPermissionReady",
+          "line": 137,
+          "arabicJSDoc": true,
+          "documentsReturn": true,
+          "documentsParameters": true
+        }
+      ],
+      "propertyOrAssignmentCallbacks": [],
+      "registeredValidationCallbacks": []
+    },
+    {
+      "file": "resources/js/back/forms/feedback.js",
+      "sourceChanged": true,
+      "astEquivalent": true,
+      "baselineSha256": "8cdc98352b9dd06a0d8d7beb422b087ba3c38263c2319870771e4040ad934f4f",
+      "documentedSha256": "be929f3252ffc89c619034912f054ee7aeaf0bf596f3447700aaff174f320cd3",
+      "namedFunctions": [
+        {
+          "name": "showToast",
+          "line": 9,
+          "arabicJSDoc": true,
+          "documentsReturn": true,
+          "documentsParameters": true
+        },
+        {
+          "name": "togglePageLoader",
+          "line": 38,
+          "arabicJSDoc": true,
+          "documentsReturn": true,
+          "documentsParameters": true
+        }
+      ],
+      "propertyOrAssignmentCallbacks": [],
+      "registeredValidationCallbacks": []
+    },
+    {
+      "file": "resources/js/back/forms/fields.js",
+      "sourceChanged": true,
+      "astEquivalent": true,
+      "baselineSha256": "3b071f4867b6e7cd69987b2bab5149528d01993cf9bb85d15050fc74c267539f",
+      "documentedSha256": "bd3149017a7338aded88198132b3a20c9c7ba4a1c2f9fe86c0fd9b64d4fed605",
+      "namedFunctions": [
+        {
+          "name": "isDeclaredDashboardField",
+          "line": 14,
+          "arabicJSDoc": true,
+          "documentsReturn": true,
+          "documentsParameters": true
+        },
+        {
+          "name": "populateField",
+          "line": 34,
+          "arabicJSDoc": true,
+          "documentsReturn": true,
+          "documentsParameters": true
+        },
+        {
+          "name": "populateRegularField",
+          "line": 55,
+          "arabicJSDoc": true,
+          "documentsReturn": true,
+          "documentsParameters": true
+        },
+        {
+          "name": "populatePermissions",
+          "line": 186,
+          "arabicJSDoc": true,
+          "documentsReturn": true,
+          "documentsParameters": true
+        }
+      ],
+      "propertyOrAssignmentCallbacks": [],
+      "registeredValidationCallbacks": []
+    },
+    {
+      "file": "resources/js/back/forms/formatting.js",
+      "sourceChanged": false,
+      "astEquivalent": true,
+      "baselineSha256": "84ac3143fb7ab57808c939f6c03323c66ef67b1a42d9a43a93d966fb33606e8e",
+      "documentedSha256": "84ac3143fb7ab57808c939f6c03323c66ef67b1a42d9a43a93d966fb33606e8e",
+      "namedFunctions": [
+        {
+          "name": "direction",
+          "line": 7,
+          "arabicJSDoc": true,
+          "documentsReturn": true,
+          "documentsParameters": true
+        },
+        {
+          "name": "formatDateAgo",
+          "line": 16,
+          "arabicJSDoc": true,
+          "documentsReturn": true,
+          "documentsParameters": true
+        }
+      ],
+      "propertyOrAssignmentCallbacks": [],
+      "registeredValidationCallbacks": []
+    },
+    {
+      "file": "resources/js/back/forms/language-input.js",
+      "sourceChanged": true,
+      "astEquivalent": true,
+      "baselineSha256": "e926d18124d114bec783ee02d3bb1e32d611e88c2ba7315223cb4c27bb3204c7",
+      "documentedSha256": "cc8bf077451b20fe35dd8a4fcc57960d518ad3b43a785f787168b3e4cb437dee",
+      "namedFunctions": [
+        {
+          "name": "restrictInputToLanguage",
+          "line": 27,
+          "arabicJSDoc": true,
+          "documentsReturn": true,
+          "documentsParameters": true
+        },
+        {
+          "name": "restrictInputToLanguageJQuery",
+          "line": 59,
+          "arabicJSDoc": true,
+          "documentsReturn": true,
+          "documentsParameters": true
+        },
+        {
+          "name": "restrictInputToLanguageInForm",
+          "line": 70,
+          "arabicJSDoc": true,
+          "documentsReturn": true,
+          "documentsParameters": true
+        }
+      ],
+      "propertyOrAssignmentCallbacks": [],
+      "registeredValidationCallbacks": []
+    },
+    {
+      "file": "resources/js/back/forms/maps.js",
+      "sourceChanged": true,
+      "astEquivalent": true,
+      "baselineSha256": "db181405bbd47bebce97ad0eb6a77f2f9dd110d320d8034377076ed8cf284286",
+      "documentedSha256": "5404e116cf3d32d7410d22e6af0632a0fb0d753c657abb28900c9d2417cd313f",
+      "namedFunctions": [
+        {
+          "name": "populateBoundary",
+          "line": 12,
+          "arabicJSDoc": true,
+          "documentsReturn": true,
+          "documentsParameters": true
+        },
+        {
+          "name": "updateCoordinates",
+          "line": 84,
+          "arabicJSDoc": true,
+          "documentsReturn": true,
+          "documentsParameters": true
+        },
+        {
+          "name": "initMap",
+          "line": 98,
+          "arabicJSDoc": true,
+          "documentsReturn": true,
+          "documentsParameters": true
+        },
+        {
+          "name": "updateMarkerAndMap",
+          "line": 141,
+          "arabicJSDoc": true,
+          "documentsReturn": true,
+          "documentsParameters": true
+        }
+      ],
+      "propertyOrAssignmentCallbacks": [],
+      "registeredValidationCallbacks": []
+    },
+    {
+      "file": "resources/js/back/forms/media.js",
+      "sourceChanged": true,
+      "astEquivalent": true,
+      "baselineSha256": "a09e4fb133eeb2a95c952f6ce125b8f415e604ffccc2b73833502e5acc7482c2",
+      "documentedSha256": "fa2d8ae8e8e44f8052f2c04f953fa2242617210834fb8813465720620e8fff8e",
+      "namedFunctions": [
+        {
+          "name": "populateCarousel",
+          "line": 8,
+          "arabicJSDoc": true,
+          "documentsReturn": true,
+          "documentsParameters": true
+        },
+        {
+          "name": "populateImages",
+          "line": 51,
+          "arabicJSDoc": true,
+          "documentsReturn": true,
+          "documentsParameters": true
+        },
+        {
+          "name": "populateImage",
+          "line": 113,
+          "arabicJSDoc": true,
+          "documentsReturn": true,
+          "documentsParameters": true
+        },
+        {
+          "name": "populateVideo",
+          "line": 128,
+          "arabicJSDoc": true,
+          "documentsReturn": true,
+          "documentsParameters": true
+        },
+        {
+          "name": "removeVideoPreview",
+          "line": 197,
+          "arabicJSDoc": true,
+          "documentsReturn": true,
+          "documentsParameters": true
+        }
+      ],
+      "propertyOrAssignmentCallbacks": [],
+      "registeredValidationCallbacks": []
+    },
+    {
+      "file": "resources/js/back/forms/modal-lifecycle.js",
+      "sourceChanged": true,
+      "astEquivalent": true,
+      "baselineSha256": "56fabca1fbc40b16788f701197d9f7fbda769241fd85c2c81fb31d7764ed678b",
+      "documentedSha256": "7987eb7cab8e1835e1d635244bcebf3bb7684b9cdf8d0ccae399cae446194db7",
+      "namedFunctions": [
+        {
+          "name": "closeModal",
+          "line": 8,
+          "arabicJSDoc": true,
+          "documentsReturn": true,
+          "documentsParameters": true
+        },
+        {
+          "name": "finish",
+          "line": 21,
+          "arabicJSDoc": true,
+          "documentsReturn": true,
+          "documentsParameters": true
+        },
+        {
+          "name": "onHidden",
+          "line": 32,
+          "arabicJSDoc": true,
+          "documentsReturn": true,
+          "documentsParameters": true
+        },
+        {
+          "name": "onShown",
+          "line": 37,
+          "arabicJSDoc": true,
+          "documentsReturn": true,
+          "documentsParameters": true
+        }
+      ],
+      "propertyOrAssignmentCallbacks": [],
+      "registeredValidationCallbacks": []
+    },
+    {
+      "file": "resources/js/back/forms/population.js",
+      "sourceChanged": true,
+      "astEquivalent": true,
+      "baselineSha256": "8884c0eb51f4cb2bc9108694f07d9b99e263f37d321c5c83576b2eb5ae0264d3",
+      "documentedSha256": "5676124a1edac828804382f25873f2dfbb487b733fd63d99f88d143db2e8375c",
+      "namedFunctions": [
+        {
+          "name": "resetTheForm",
+          "line": 11,
+          "arabicJSDoc": true,
+          "documentsReturn": true,
+          "documentsParameters": true
+        },
+        {
+          "name": "isCurrentPopulation",
+          "line": 29,
+          "arabicJSDoc": true,
+          "documentsReturn": true,
+          "documentsParameters": true
+        },
+        {
+          "name": "finishPopulation",
+          "line": 39,
+          "arabicJSDoc": true,
+          "documentsReturn": true,
+          "documentsParameters": true
+        },
+        {
+          "name": "cancelPopulation",
+          "line": 49,
+          "arabicJSDoc": true,
+          "documentsReturn": true,
+          "documentsParameters": true
+        },
+        {
+          "name": "cancelPendingFormPopulation",
+          "line": 59,
+          "arabicJSDoc": true,
+          "documentsReturn": true,
+          "documentsParameters": true
+        },
+        {
+          "name": "populateFormFromAjax",
+          "line": 78,
+          "arabicJSDoc": true,
+          "documentsReturn": true,
+          "documentsParameters": true
+        },
+        {
+          "name": "setFormData",
+          "line": 143,
+          "arabicJSDoc": true,
+          "documentsReturn": true,
+          "documentsParameters": true
+        },
+        {
+          "name": "populateIdField",
+          "line": 169,
+          "arabicJSDoc": true,
+          "documentsReturn": true,
+          "documentsParameters": true
+        },
+        {
+          "name": "populateForm",
+          "line": 179,
+          "arabicJSDoc": true,
+          "documentsReturn": true,
+          "documentsParameters": true
+        }
+      ],
+      "propertyOrAssignmentCallbacks": [
+        {
+          "name": "beforeSend",
+          "line": 95,
+          "arabicJSDoc": true,
+          "documentsReturn": true,
+          "documentsParameters": true
+        },
+        {
+          "name": "success",
+          "line": 103,
+          "arabicJSDoc": true,
+          "documentsReturn": true,
+          "documentsParameters": true
+        },
+        {
+          "name": "error",
+          "line": 117,
+          "arabicJSDoc": true,
+          "documentsReturn": true,
+          "documentsParameters": true
+        },
+        {
+          "name": "complete",
+          "line": 126,
+          "arabicJSDoc": true,
+          "documentsReturn": true,
+          "documentsParameters": true
+        }
+      ],
+      "registeredValidationCallbacks": []
+    },
+    {
+      "file": "resources/js/back/forms/repeaters.js",
+      "sourceChanged": true,
+      "astEquivalent": true,
+      "baselineSha256": "25ea7c87baa4e7215fed47a3da8145a33f6071475a9ae3e0555349230e864e35",
+      "documentedSha256": "a3d1f056b87b9a38ba9b342316ca7f9bb1b27479071a3a3ca81ada476186ab9d",
+      "namedFunctions": [
+        {
+          "name": "resetMultiForm",
+          "line": 11,
+          "arabicJSDoc": true,
+          "documentsReturn": true,
+          "documentsParameters": true
+        },
+        {
+          "name": "addValidationForRow",
+          "line": 51,
+          "arabicJSDoc": true,
+          "documentsReturn": true,
+          "documentsParameters": true
+        },
+        {
+          "name": "addItemMultiForm",
+          "line": 81,
+          "arabicJSDoc": true,
+          "documentsReturn": true,
+          "documentsParameters": true
+        },
+        {
+          "name": "removeItemMultiForm",
+          "line": 156,
+          "arabicJSDoc": true,
+          "documentsReturn": true,
+          "documentsParameters": true
+        }
+      ],
+      "propertyOrAssignmentCallbacks": [],
+      "registeredValidationCallbacks": []
+    },
+    {
+      "file": "resources/js/back/forms/select2.js",
+      "sourceChanged": true,
+      "astEquivalent": true,
+      "baselineSha256": "a36a48ca4b5c9fe21c382bb4884b952a6f3d8ef69729d1d82ae2b02ce4ef0ff1",
+      "documentedSha256": "748137a2d6f98d0ad88912ecbde17a337dcd59bac97bd4d81ae9873ca4d974fe",
+      "namedFunctions": [
+        {
+          "name": "getNestedValue",
+          "line": 11,
+          "arabicJSDoc": true,
+          "documentsReturn": true,
+          "documentsParameters": true
+        },
+        {
+          "name": "updateSelect2Options",
+          "line": 26,
+          "arabicJSDoc": true,
+          "documentsReturn": true,
+          "documentsParameters": true
+        },
+        {
+          "name": "initializeSelect2",
+          "line": 74,
+          "arabicJSDoc": true,
+          "documentsReturn": true,
+          "documentsParameters": true
+        },
+        {
+          "name": "initSelect2",
+          "line": 92,
+          "arabicJSDoc": true,
+          "documentsReturn": true,
+          "documentsParameters": true
+        },
+        {
+          "name": "setupSelect2",
+          "line": 105,
+          "arabicJSDoc": true,
+          "documentsReturn": true,
+          "documentsParameters": true
+        },
+        {
+          "name": "formatColorOption",
+          "line": 191,
+          "arabicJSDoc": true,
+          "documentsReturn": true,
+          "documentsParameters": true
+        }
+      ],
+      "propertyOrAssignmentCallbacks": [
+        {
+          "name": "escapeMarkup",
+          "line": 133,
+          "arabicJSDoc": true,
+          "documentsReturn": true,
+          "documentsParameters": true
+        },
+        {
+          "name": "data",
+          "line": 142,
+          "arabicJSDoc": true,
+          "documentsReturn": true,
+          "documentsParameters": true
+        },
+        {
+          "name": "processResults",
+          "line": 164,
+          "arabicJSDoc": true,
+          "documentsReturn": true,
+          "documentsParameters": true
+        }
+      ],
+      "registeredValidationCallbacks": []
+    },
+    {
+      "file": "resources/js/back/forms/submission.js",
+      "sourceChanged": true,
+      "astEquivalent": true,
+      "baselineSha256": "6548ff1cbcccb08ab4a3ad171d955c1fc1f82f542ede3a937f9043f40bd68b92",
+      "documentedSha256": "27306d0cc89ec0912874c85f92a4a8aeef6f136059d02c804e58c92f664d3bfb",
+      "namedFunctions": [
+        {
+          "name": "update_switch_val",
+          "line": 12,
+          "arabicJSDoc": true,
+          "documentsReturn": true,
+          "documentsParameters": true
+        },
+        {
+          "name": "customFunction",
+          "line": 52,
+          "arabicJSDoc": true,
+          "documentsReturn": true,
+          "documentsParameters": true
+        },
+        {
+          "name": "updatePassword",
+          "line": 118,
+          "arabicJSDoc": true,
+          "documentsReturn": true,
+          "documentsParameters": true
+        }
+      ],
+      "propertyOrAssignmentCallbacks": [
+        {
+          "name": "success",
+          "line": 26,
+          "arabicJSDoc": true,
+          "documentsReturn": true,
+          "documentsParameters": true
+        },
+        {
+          "name": "error",
+          "line": 38,
+          "arabicJSDoc": true,
+          "documentsReturn": true,
+          "documentsParameters": true
+        },
+        {
+          "name": "success",
+          "line": 86,
+          "arabicJSDoc": true,
+          "documentsReturn": true,
+          "documentsParameters": true
+        },
+        {
+          "name": "error",
+          "line": 104,
+          "arabicJSDoc": true,
+          "documentsReturn": true,
+          "documentsParameters": true
+        },
+        {
+          "name": "success",
+          "line": 133,
+          "arabicJSDoc": true,
+          "documentsReturn": true,
+          "documentsParameters": true
+        },
+        {
+          "name": "error",
+          "line": 147,
+          "arabicJSDoc": true,
+          "documentsReturn": true,
+          "documentsParameters": true
+        }
+      ],
+      "registeredValidationCallbacks": []
+    },
+    {
+      "file": "resources/js/back/forms/urls.js",
+      "sourceChanged": false,
+      "astEquivalent": true,
+      "baselineSha256": "40de02d3965a4000233d1968d6ceca486a1f1a969c44190f52d055e08547e186",
+      "documentedSha256": "40de02d3965a4000233d1968d6ceca486a1f1a969c44190f52d055e08547e186",
+      "namedFunctions": [
+        {
+          "name": "replaceUrlPlaceholder",
+          "line": 9,
+          "arabicJSDoc": true,
+          "documentsReturn": true,
+          "documentsParameters": true
+        },
+        {
+          "name": "replaceUrlPlaceholder_v2",
+          "line": 27,
+          "arabicJSDoc": true,
+          "documentsReturn": true,
+          "documentsParameters": true
+        },
+        {
+          "name": "isValidUrl",
+          "line": 36,
+          "arabicJSDoc": true,
+          "documentsReturn": true,
+          "documentsParameters": true
+        }
+      ],
+      "propertyOrAssignmentCallbacks": [],
+      "registeredValidationCallbacks": []
+    },
+    {
+      "file": "resources/js/back/forms/validation-errors.js",
+      "sourceChanged": true,
+      "astEquivalent": true,
+      "baselineSha256": "a1cdfba016b7cd91b4e0e03c6370db30d039b0f0a6741b25220f0e872101df5f",
+      "documentedSha256": "1419850bc5efe740f9be3582be3f69aacafd1450fcc89a5ec4f3a72ee8c79bd5",
+      "namedFunctions": [
+        {
+          "name": "handleValidationErrors",
+          "line": 10,
+          "arabicJSDoc": true,
+          "documentsReturn": true,
+          "documentsParameters": true
+        },
+        {
+          "name": "scrollToElement",
+          "line": 93,
+          "arabicJSDoc": true,
+          "documentsReturn": true,
+          "documentsParameters": true
+        },
+        {
+          "name": "switchToTabWithError",
+          "line": 117,
+          "arabicJSDoc": true,
+          "documentsReturn": true,
+          "documentsParameters": true
+        }
+      ],
+      "propertyOrAssignmentCallbacks": [],
+      "registeredValidationCallbacks": []
+    },
+    {
+      "file": "resources/js/back/forms/validation-rules.js",
+      "sourceChanged": true,
+      "astEquivalent": true,
+      "baselineSha256": "cd4e927fbb94010b8e79872412fd1b400ce96fe63ed5b2bd0886581df2affbc7",
+      "documentedSha256": "c8f1813f29f401c374f2f282a245aae5f0fd714610316264cf2f25ae7baefa73",
+      "namedFunctions": [
+        {
+          "name": "registerValidationRules",
+          "line": 7,
+          "arabicJSDoc": true,
+          "documentsReturn": true,
+          "documentsParameters": true
+        }
+      ],
+      "propertyOrAssignmentCallbacks": [],
+      "registeredValidationCallbacks": [
+        {
+          "name": "greaterThan",
+          "line": 16,
+          "arabicJSDoc": true,
+          "documentsReturn": true,
+          "documentsParameters": true
+        },
+        {
+          "name": "filesize",
+          "line": 28,
+          "arabicJSDoc": true,
+          "documentsReturn": true,
+          "documentsParameters": true
+        },
+        {
+          "name": "maxFileCount",
+          "line": 42,
+          "arabicJSDoc": true,
+          "documentsReturn": true,
+          "documentsParameters": true
+        },
+        {
+          "name": "greaterThan",
+          "line": 58,
+          "arabicJSDoc": true,
+          "documentsReturn": true,
+          "documentsParameters": true
+        },
+        {
+          "name": "greaterThanOrEqual",
+          "line": 70,
+          "arabicJSDoc": true,
+          "documentsReturn": true,
+          "documentsParameters": true
+        },
+        {
+          "name": "afterDate",
+          "line": 82,
+          "arabicJSDoc": true,
+          "documentsReturn": true,
+          "documentsParameters": true
+        },
+        {
+          "name": "afterOrEqualDate",
+          "line": 97,
+          "arabicJSDoc": true,
+          "documentsReturn": true,
+          "documentsParameters": true
+        },
+        {
+          "name": "beforeDate",
+          "line": 112,
+          "arabicJSDoc": true,
+          "documentsReturn": true,
+          "documentsParameters": true
+        },
+        {
+          "name": "beforeOrEqualDate",
+          "line": 127,
+          "arabicJSDoc": true,
+          "documentsReturn": true,
+          "documentsParameters": true
+        },
+        {
+          "name": "afterToday",
+          "line": 141,
+          "arabicJSDoc": true,
+          "documentsReturn": true,
+          "documentsParameters": true
+        }
+      ]
+    },
+    {
+      "file": "resources/js/back/forms/validation.js",
+      "sourceChanged": true,
+      "astEquivalent": true,
+      "baselineSha256": "e28f7ee73b334f95cfc5c4cfc9301bc67e304a6f3917a959864fb572cb4c6c91",
+      "documentedSha256": "661ecd24389ab96c107591bceb9a472809fa349ef85fdbeaa92546d752eb2de7",
+      "namedFunctions": [
+        {
+          "name": "defineFormValidation",
+          "line": 13,
+          "arabicJSDoc": true,
+          "documentsReturn": true,
+          "documentsParameters": true
+        },
+        {
+          "name": "validateSummerNotes",
+          "line": 129,
+          "arabicJSDoc": true,
+          "documentsReturn": true,
+          "documentsParameters": true
+        }
+      ],
+      "propertyOrAssignmentCallbacks": [
+        {
+          "name": "highlight",
+          "line": 26,
+          "arabicJSDoc": true,
+          "documentsReturn": true,
+          "documentsParameters": true
+        },
+        {
+          "name": "unhighlight",
+          "line": 54,
+          "arabicJSDoc": true,
+          "documentsReturn": true,
+          "documentsParameters": true
+        },
+        {
+          "name": "errorPlacement",
+          "line": 81,
+          "arabicJSDoc": true,
+          "documentsReturn": true,
+          "documentsParameters": true
+        },
+        {
+          "name": "invalidHandler",
+          "line": 104,
+          "arabicJSDoc": true,
+          "documentsReturn": true,
+          "documentsParameters": true
+        }
+      ],
+      "registeredValidationCallbacks": []
+    },
+    {
+      "file": "resources/js/back/home.js",
+      "sourceChanged": true,
+      "astEquivalent": true,
+      "baselineSha256": "27e4690e7d2c9a041dd45139fa3c0fa031f18680d5cd3a0a833def86502daf3f",
+      "documentedSha256": "acca995d24520497d55082d3e72fb55b7df7045cf599c7e193e9d5f907d24464",
+      "namedFunctions": [
+        {
+          "name": "initializeDashboardCharts",
+          "line": 11,
+          "arabicJSDoc": true,
+          "documentsReturn": true,
+          "documentsParameters": true
+        }
+      ],
+      "propertyOrAssignmentCallbacks": [],
+      "registeredValidationCallbacks": []
+    },
+    {
+      "file": "resources/js/back/home/circle-chart.js",
+      "sourceChanged": true,
+      "astEquivalent": true,
+      "baselineSha256": "0419800936874b5cc4c67217ed558824e8ffa75982f35c6727d7ab1fed79b473",
+      "documentedSha256": "2e70e5f3a136770b3b5a8bd1e9c0eea6d5c52bf19c515f363779a20b3e6e6c48",
+      "namedFunctions": [
+        {
+          "name": "initcircleChart",
+          "line": 9,
+          "arabicJSDoc": true,
+          "documentsReturn": true,
+          "documentsParameters": true
+        },
+        {
+          "name": "updatecircleChart",
+          "line": 145,
+          "arabicJSDoc": true,
+          "documentsReturn": true,
+          "documentsParameters": true
+        },
+        {
+          "name": "fetchDataAndUpdateChart",
+          "line": 186,
+          "arabicJSDoc": true,
+          "documentsReturn": true,
+          "documentsParameters": true
+        }
+      ],
+      "propertyOrAssignmentCallbacks": [
+        {
+          "name": "formatter",
+          "line": 43,
+          "arabicJSDoc": true,
+          "documentsReturn": true,
+          "documentsParameters": true
+        },
+        {
+          "name": "formatter",
+          "line": 93,
+          "arabicJSDoc": true,
+          "documentsReturn": true,
+          "documentsParameters": true
+        },
+        {
+          "name": "formatter",
+          "line": 112,
+          "arabicJSDoc": true,
+          "documentsReturn": true,
+          "documentsParameters": true
+        },
+        {
+          "name": "formatter",
+          "line": 168,
+          "arabicJSDoc": true,
+          "documentsReturn": true,
+          "documentsParameters": true
+        }
+      ],
+      "registeredValidationCallbacks": []
+    },
+    {
+      "file": "resources/js/back/home/daily-sales-chart.js",
+      "sourceChanged": true,
+      "astEquivalent": true,
+      "baselineSha256": "d4ef65ff9c4efa7c7662a7b394f365f4b4ffdc3b6b8f821c3d3be199b642c4ab",
+      "documentedSha256": "1e16a6069b781813853b7dd3f8dba975a17940b4fa196a20e94183db93e3b533",
+      "namedFunctions": [
+        {
+          "name": "initAverageDailySalesChart",
+          "line": 9,
+          "arabicJSDoc": true,
+          "documentsReturn": true,
+          "documentsParameters": true
+        },
+        {
+          "name": "updateAverageDailySalesChart",
+          "line": 125,
+          "arabicJSDoc": true,
+          "documentsReturn": true,
+          "documentsParameters": true
+        },
+        {
+          "name": "fetchDailySalesDataAndUpdateChart",
+          "line": 154,
+          "arabicJSDoc": true,
+          "documentsReturn": true,
+          "documentsParameters": true
+        }
+      ],
+      "propertyOrAssignmentCallbacks": [],
+      "registeredValidationCallbacks": []
+    },
+    {
+      "file": "resources/js/back/home/month-selection.js",
+      "sourceChanged": true,
+      "astEquivalent": true,
+      "baselineSha256": "9ec7ed9f3ee08e70877933de19cbf22df82c891ef921999d7881626daf09a9cd",
+      "documentedSha256": "4666b912e37331148eecc5d4237cd9001ee0247749ef720f9d2bc64c79b5687e",
+      "namedFunctions": [
+        {
+          "name": "setupMonthSelection",
+          "line": 8,
+          "arabicJSDoc": true,
+          "documentsReturn": true,
+          "documentsParameters": true
+        },
+        {
+          "name": "fetchMonthDataFromLaravel",
+          "line": 42,
+          "arabicJSDoc": true,
+          "documentsReturn": true,
+          "documentsParameters": true
+        }
+      ],
+      "propertyOrAssignmentCallbacks": [],
+      "registeredValidationCallbacks": []
+    },
+    {
+      "file": "resources/js/back/home/year-chart-options.js",
+      "sourceChanged": true,
+      "astEquivalent": true,
+      "baselineSha256": "922d7e5f8f9827219b3a3d977a05b74e2d09866b685ed4dd870ad622dab1de1b",
+      "documentedSha256": "af41d1d707a27eb25414121b98822fba58682898a00d1e87d9ed9838964cf931",
+      "namedFunctions": [
+        {
+          "name": "buildYearChartOptions",
+          "line": 9,
+          "arabicJSDoc": true,
+          "documentsReturn": true,
+          "documentsParameters": true
+        }
+      ],
+      "propertyOrAssignmentCallbacks": [
+        {
+          "name": "formatter",
+          "line": 121,
+          "arabicJSDoc": true,
+          "documentsReturn": true,
+          "documentsParameters": true
+        }
+      ],
+      "registeredValidationCallbacks": []
+    },
+    {
+      "file": "resources/js/back/home/year-chart.js",
+      "sourceChanged": false,
+      "astEquivalent": true,
+      "baselineSha256": "200e9d27e7ae64aab42e561f1af76cdc32d375633ec73de03ee8f6dd2ffd0c7f",
+      "documentedSha256": "200e9d27e7ae64aab42e561f1af76cdc32d375633ec73de03ee8f6dd2ffd0c7f",
+      "namedFunctions": [
+        {
+          "name": "initYearStatisticsChart",
+          "line": 10,
+          "arabicJSDoc": true,
+          "documentsReturn": true,
+          "documentsParameters": true
+        }
+      ],
+      "propertyOrAssignmentCallbacks": [],
+      "registeredValidationCallbacks": []
+    },
+    {
+      "file": "resources/js/back/item-table.js",
+      "sourceChanged": false,
+      "astEquivalent": true,
+      "baselineSha256": "71a5597e4f0701a9e1cd334896915c680e769646df53ad5b2761e48738ae3b84",
+      "documentedSha256": "71a5597e4f0701a9e1cd334896915c680e769646df53ad5b2761e48738ae3b84",
+      "namedFunctions": [],
+      "propertyOrAssignmentCallbacks": [],
+      "registeredValidationCallbacks": []
+    },
+    {
+      "file": "resources/js/back/item-tables/headers.js",
+      "sourceChanged": true,
+      "astEquivalent": true,
+      "baselineSha256": "669d3838af2f93ce6468df405c300f921c06ef3feb86b66ab06827ca0793b563",
+      "documentedSha256": "cb4752abd9b47680c6735d3315c225ba7668dae46775a81b6ee9679cc667aa1d",
+      "namedFunctions": [
+        {
+          "name": "generateTableHeaders",
+          "line": 7,
+          "arabicJSDoc": true,
+          "documentsReturn": true,
+          "documentsParameters": true
+        }
+      ],
+      "propertyOrAssignmentCallbacks": [],
+      "registeredValidationCallbacks": []
+    },
+    {
+      "file": "resources/js/back/item-tables/modals.js",
+      "sourceChanged": true,
+      "astEquivalent": true,
+      "baselineSha256": "d649b8cfebffbc539affbbc7f554c8cd30f1bbc1d7b49752fff0d66461edd0a6",
+      "documentedSha256": "c71c82e5815385a933a88c0f8df6d0ae98850b510e1246e4d17e4b3e445b3ad1",
+      "namedFunctions": [
+        {
+          "name": "closeTabModals",
+          "line": 10,
+          "arabicJSDoc": true,
+          "documentsReturn": true,
+          "documentsParameters": true
+        },
+        {
+          "name": "disposeTabModals",
+          "line": 19,
+          "arabicJSDoc": true,
+          "documentsReturn": true,
+          "documentsParameters": true
+        },
+        {
+          "name": "prepareTabModals",
+          "line": 42,
+          "arabicJSDoc": true,
+          "documentsReturn": true,
+          "documentsParameters": true
+        }
+      ],
+      "propertyOrAssignmentCallbacks": [],
+      "registeredValidationCallbacks": []
+    },
+    {
+      "file": "resources/js/back/item-tables/navigation.js",
+      "sourceChanged": true,
+      "astEquivalent": true,
+      "baselineSha256": "c2aa0407448b91a4cb73c0c732640a67c99347304bd358e4797042338e3093e8",
+      "documentedSha256": "d6fb04753314c4891d9c39d38dc8b14c2fefe78dfa1c49d7668c9a0768a03723",
+      "namedFunctions": [
+        {
+          "name": "setTabLoading",
+          "line": 19,
+          "arabicJSDoc": true,
+          "documentsReturn": true,
+          "documentsParameters": true
+        },
+        {
+          "name": "loadTableData",
+          "line": 37,
+          "arabicJSDoc": true,
+          "documentsReturn": true,
+          "documentsParameters": true
+        },
+        {
+          "name": "startItemTables",
+          "line": 90,
+          "arabicJSDoc": true,
+          "documentsReturn": true,
+          "documentsParameters": true
+        }
+      ],
+      "propertyOrAssignmentCallbacks": [],
+      "registeredValidationCallbacks": []
+    },
+    {
+      "file": "resources/js/back/page-table.js",
+      "sourceChanged": true,
+      "astEquivalent": true,
+      "baselineSha256": "da99101c1932bc9e833b0a3f94bf0cc5d3b5aab1f39dd5f34cb9d02a0aa956fa",
+      "documentedSha256": "4984c410f28f25a590083f7a8e87f76ddd16689955ff14c9a7e54533a518e8c3",
+      "namedFunctions": [
+        {
+          "name": "startPageTable",
+          "line": 9,
+          "arabicJSDoc": true,
+          "documentsReturn": true,
+          "documentsParameters": true
+        }
+      ],
+      "propertyOrAssignmentCallbacks": [],
+      "registeredValidationCallbacks": []
+    },
+    {
+      "file": "resources/js/back/table.js",
+      "sourceChanged": false,
+      "astEquivalent": true,
+      "baselineSha256": "7f521d645aa2a87ab6a2f4f6704cc5510cb1ee347ab1eeabe37a2f6b0a9b1e80",
+      "documentedSha256": "7f521d645aa2a87ab6a2f4f6704cc5510cb1ee347ab1eeabe37a2f6b0a9b1e80",
+      "namedFunctions": [],
+      "propertyOrAssignmentCallbacks": [],
+      "registeredValidationCallbacks": []
+    },
+    {
+      "file": "resources/js/back/tables/columns.js",
+      "sourceChanged": true,
+      "astEquivalent": true,
+      "baselineSha256": "f6861948044057ffd87327736179f7503e6a5a4d9c31efe258608366607aca2a",
+      "documentedSha256": "05cb7cbe3ba0b6a10b0bdf7bf642eb1017dc2a69d6aa48059a17bfb0c56a0b04",
+      "namedFunctions": [
+        {
+          "name": "renderImageDescription",
+          "line": 21,
+          "arabicJSDoc": true,
+          "documentsReturn": true,
+          "documentsParameters": true
+        },
+        {
+          "name": "renderColumn",
+          "line": 40,
+          "arabicJSDoc": true,
+          "documentsReturn": true,
+          "documentsParameters": true
+        },
+        {
+          "name": "buildColumns",
+          "line": 64,
+          "arabicJSDoc": true,
+          "documentsReturn": true,
+          "documentsParameters": true
+        }
+      ],
+      "propertyOrAssignmentCallbacks": [
+        {
+          "name": "render",
+          "line": 76,
+          "arabicJSDoc": true,
+          "documentsReturn": true,
+          "documentsParameters": true
+        }
+      ],
+      "registeredValidationCallbacks": []
+    },
+    {
+      "file": "resources/js/back/tables/configuration.js",
+      "sourceChanged": true,
+      "astEquivalent": true,
+      "baselineSha256": "fa191385ccc68f07bac2eca57848a6b720d2a6d284a0eda56fedb5c9be432e62",
+      "documentedSha256": "1420fc88463ed1a6fc62583bd08134e69ed3f97a08c3e57714304b5992a1ebca",
+      "namedFunctions": [
+        {
+          "name": "getNestedValue",
+          "line": 9,
+          "arabicJSDoc": true,
+          "documentsReturn": true,
+          "documentsParameters": true
+        },
+        {
+          "name": "buildTableConfiguration",
+          "line": 20,
+          "arabicJSDoc": true,
+          "documentsReturn": true,
+          "documentsParameters": true
+        },
+        {
+          "name": "prepareDataTable",
+          "line": 49,
+          "arabicJSDoc": true,
+          "documentsReturn": true,
+          "documentsParameters": true
+        }
+      ],
+      "propertyOrAssignmentCallbacks": [],
+      "registeredValidationCallbacks": []
+    },
+    {
+      "file": "resources/js/back/tables/fields.js",
+      "sourceChanged": true,
+      "astEquivalent": true,
+      "baselineSha256": "658582a466e0d91a62e84a8cd4597998591ef92d5999b9b4360618ba80a00030",
+      "documentedSha256": "1aa49e83ea209482a95bcfc13756b3eec723ea654406a52f1bf16ad8c6205d79",
+      "namedFunctions": [
+        {
+          "name": "fieldElement",
+          "line": 20,
+          "arabicJSDoc": true,
+          "documentsReturn": true,
+          "documentsParameters": true
+        },
+        {
+          "name": "formatColorOption",
+          "line": 30,
+          "arabicJSDoc": true,
+          "documentsReturn": true,
+          "documentsParameters": true
+        },
+        {
+          "name": "initializeSelect",
+          "line": 46,
+          "arabicJSDoc": true,
+          "documentsReturn": true,
+          "documentsParameters": true
+        },
+        {
+          "name": "initializeEditor",
+          "line": 109,
+          "arabicJSDoc": true,
+          "documentsReturn": true,
+          "documentsParameters": true
+        },
+        {
+          "name": "initializeInputs",
+          "line": 126,
+          "arabicJSDoc": true,
+          "documentsReturn": true,
+          "documentsParameters": true
+        },
+        {
+          "name": "initializeFields",
+          "line": 139,
+          "arabicJSDoc": true,
+          "documentsReturn": true,
+          "documentsParameters": true
+        }
+      ],
+      "propertyOrAssignmentCallbacks": [
+        {
+          "name": "data",
+          "line": 63,
+          "arabicJSDoc": true,
+          "documentsReturn": true,
+          "documentsParameters": true
+        },
+        {
+          "name": "templateResult",
+          "line": 81,
+          "arabicJSDoc": true,
+          "documentsReturn": true,
+          "documentsParameters": true
+        },
+        {
+          "name": "templateSelection",
+          "line": 87,
+          "arabicJSDoc": true,
+          "documentsReturn": true,
+          "documentsParameters": true
+        },
+        {
+          "name": "escapeMarkup",
+          "line": 93,
+          "arabicJSDoc": true,
+          "documentsReturn": true,
+          "documentsParameters": true
+        }
+      ],
+      "registeredValidationCallbacks": []
+    },
+    {
+      "file": "resources/js/back/tables/lifecycle.js",
+      "sourceChanged": true,
+      "astEquivalent": true,
+      "baselineSha256": "dba131d9aec6e1b0aa05205a4aadd0c9547cf9e66370a44cb32e91160f4351c0",
+      "documentedSha256": "4a8009f89a90a110519805ae32af54a120f929b4906c98c6103c64d69da3041d",
+      "namedFunctions": [
+        {
+          "name": "dataColumnIndexes",
+          "line": 12,
+          "arabicJSDoc": true,
+          "documentsReturn": true,
+          "documentsParameters": true
+        },
+        {
+          "name": "bindColumnVisibility",
+          "line": 22,
+          "arabicJSDoc": true,
+          "documentsReturn": true,
+          "documentsParameters": true
+        },
+        {
+          "name": "bindSwitchInputs",
+          "line": 39,
+          "arabicJSDoc": true,
+          "documentsReturn": true,
+          "documentsParameters": true
+        },
+        {
+          "name": "setUpDatatable",
+          "line": 52,
+          "arabicJSDoc": true,
+          "documentsReturn": true,
+          "documentsParameters": true
+        },
+        {
+          "name": "destroyDataTable",
+          "line": 75,
+          "arabicJSDoc": true,
+          "documentsReturn": true,
+          "documentsParameters": true
+        }
+      ],
+      "propertyOrAssignmentCallbacks": [],
+      "registeredValidationCallbacks": []
+    },
+    {
+      "file": "resources/js/back/tables/records.js",
+      "sourceChanged": true,
+      "astEquivalent": true,
+      "baselineSha256": "f069429293077163b7758039198223da351151d0dc0cc50077e66b632b7efab5",
+      "documentedSha256": "cf0f106e9bc3cc5ad8574742ceecbdad77e013fa6cca43235de7e92f057b1527",
+      "namedFunctions": [
+        {
+          "name": "editItem",
+          "line": 12,
+          "arabicJSDoc": true,
+          "documentsReturn": true,
+          "documentsParameters": true
+        },
+        {
+          "name": "fillForm",
+          "line": 22,
+          "arabicJSDoc": true,
+          "documentsReturn": true,
+          "documentsParameters": true
+        },
+        {
+          "name": "collectFormData",
+          "line": 31,
+          "arabicJSDoc": true,
+          "documentsReturn": true,
+          "documentsParameters": true
+        },
+        {
+          "name": "saveRecord",
+          "line": 55,
+          "arabicJSDoc": true,
+          "documentsReturn": true,
+          "documentsParameters": true
+        },
+        {
+          "name": "createItem",
+          "line": 94,
+          "arabicJSDoc": true,
+          "documentsReturn": true,
+          "documentsParameters": true
+        },
+        {
+          "name": "updateItem",
+          "line": 102,
+          "arabicJSDoc": true,
+          "documentsReturn": true,
+          "documentsParameters": true
+        },
+        {
+          "name": "deleteItem",
+          "line": 109,
+          "arabicJSDoc": true,
+          "documentsReturn": true,
+          "documentsParameters": true
+        },
+        {
+          "name": "updateValue",
+          "line": 131,
+          "arabicJSDoc": true,
+          "documentsReturn": true,
+          "documentsParameters": true
+        }
+      ],
+      "propertyOrAssignmentCallbacks": [
+        {
+          "name": "success",
+          "line": 69,
+          "arabicJSDoc": true,
+          "documentsReturn": true,
+          "documentsParameters": true
+        },
+        {
+          "name": "error",
+          "line": 84,
+          "arabicJSDoc": true,
+          "documentsReturn": true,
+          "documentsParameters": true
+        },
+        {
+          "name": "success",
+          "line": 115,
+          "arabicJSDoc": true,
+          "documentsReturn": true,
+          "documentsParameters": true
+        },
+        {
+          "name": "error",
+          "line": 121,
+          "arabicJSDoc": true,
+          "documentsReturn": true,
+          "documentsParameters": true
+        },
+        {
+          "name": "success",
+          "line": 139,
+          "arabicJSDoc": true,
+          "documentsReturn": true,
+          "documentsParameters": true
+        },
+        {
+          "name": "error",
+          "line": 145,
+          "arabicJSDoc": true,
+          "documentsReturn": true,
+          "documentsParameters": true
+        }
+      ],
+      "registeredValidationCallbacks": []
+    },
+    {
+      "file": "resources/js/back/tables/select-options.js",
+      "sourceChanged": true,
+      "astEquivalent": true,
+      "baselineSha256": "951cc6ad12b60f15a0fa8bcd5abba9c777d801a69f79b61502c50a0d5dfd6c5c",
+      "documentedSha256": "ebbc101ccb1d7687db3d5ae53d1983b498ecd19cb8aa41ac5bf26c5aab99f960",
+      "namedFunctions": [
+        {
+          "name": "buildSelectQuery",
+          "line": 10,
+          "arabicJSDoc": true,
+          "documentsReturn": true,
+          "documentsParameters": true
+        },
+        {
+          "name": "mapSelectResults",
+          "line": 38,
+          "arabicJSDoc": true,
+          "documentsReturn": true,
+          "documentsParameters": true
+        }
+      ],
+      "propertyOrAssignmentCallbacks": [],
+      "registeredValidationCallbacks": []
+    },
+    {
+      "file": "resources/js/back/tables/text.js",
+      "sourceChanged": true,
+      "astEquivalent": true,
+      "baselineSha256": "1f0d461250059e429b39e13b16acb6ecd4668cb47b9e494b5f89067387b47257",
+      "documentedSha256": "3484b03f71560c4667d6c96e0fa0d7b88702ea9e12531952abdbc2bd4848b98e",
+      "namedFunctions": [
+        {
+          "name": "escapeHtml",
+          "line": 8,
+          "arabicJSDoc": true,
+          "documentsReturn": true,
+          "documentsParameters": true
+        },
+        {
+          "name": "renderToggleText",
+          "line": 21,
+          "arabicJSDoc": true,
+          "documentsReturn": true,
+          "documentsParameters": true
+        },
+        {
+          "name": "bindTextToggles",
+          "line": 36,
+          "arabicJSDoc": true,
+          "documentsReturn": true,
+          "documentsParameters": true
+        }
+      ],
+      "propertyOrAssignmentCallbacks": [],
+      "registeredValidationCallbacks": []
+    },
+    {
+      "file": "resources/js/back/tables/validation.js",
+      "sourceChanged": true,
+      "astEquivalent": true,
+      "baselineSha256": "d62a5c5113f59b27960cead95878aefbc417f8043daa937f99275e804f6df2b0",
+      "documentedSha256": "f8a38f479003aff5d001922ecae4c80701c593c89f5fc8688f3a4d45563a026c",
+      "namedFunctions": [
+        {
+          "name": "collectValidationRules",
+          "line": 9,
+          "arabicJSDoc": true,
+          "documentsReturn": true,
+          "documentsParameters": true
+        },
+        {
+          "name": "initializeFormValidation",
+          "line": 29,
+          "arabicJSDoc": true,
+          "documentsReturn": true,
+          "documentsParameters": true
+        }
+      ],
+      "propertyOrAssignmentCallbacks": [],
+      "registeredValidationCallbacks": []
+    }
+  ],
+  "failures": [],
+  "passed": true
+}

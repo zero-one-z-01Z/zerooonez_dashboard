@@ -1,0 +1,124 @@
+{
+  "_config-CwI8Qv8x.js": {
+    "file": "assets/config-CwI8Qv8x.js",
+    "name": "config"
+  },
+  "_dashboard-Bdu29zxX.js": {
+    "file": "assets/dashboard-Bdu29zxX.js",
+    "name": "dashboard",
+    "imports": [
+      "_config-CwI8Qv8x.js"
+    ]
+  },
+  "resources/css/dashboard-builder.css": {
+    "file": "assets/dashboard-builder-DcA3wHO3.css",
+    "src": "resources/css/dashboard-builder.css",
+    "isEntry": true
+  },
+  "resources/js/back/builder.js": {
+    "file": "assets/builder-C4myneZq.js",
+    "name": "builder",
+    "src": "resources/js/back/builder.js",
+    "isEntry": true
+  },
+  "resources/js/back/crud.js": {
+    "file": "assets/crud-DSC7rKo0.js",
+    "name": "crud",
+    "src": "resources/js/back/crud.js",
+    "isEntry": true,
+    "imports": [
+      "_dashboard-Bdu29zxX.js",
+      "_config-CwI8Qv8x.js"
+    ]
+  },
+  "resources/js/back/datatable-init.js": {
+    "file": "assets/datatable-init-CvfgHtER.js",
+    "name": "datatable-init",
+    "src": "resources/js/back/datatable-init.js",
+    "isEntry": true,
+    "imports": [
+      "_dashboard-Bdu29zxX.js",
+      "_config-CwI8Qv8x.js"
+    ]
+  },
+  "resources/js/back/home.js": {
+    "file": "assets/home-DiXKOUdO.js",
+    "name": "home",
+    "src": "resources/js/back/home.js",
+    "isEntry": true,
+    "imports": [
+      "_config-CwI8Qv8x.js"
+    ]
+  },
+  "resources/js/back/item-table.js": {
+    "file": "assets/item-table-CV0SCByO.js",
+    "name": "item-table",
+    "src": "resources/js/back/item-table.js",
+    "isEntry": true,
+    "imports": [
+      "resources/js/back/table.js",
+      "resources/js/back/crud.js",
+      "_dashboard-Bdu29zxX.js",
+      "resources/js/back/datatable-init.js",
+      "_config-CwI8Qv8x.js"
+    ]
+  },
+  "resources/js/back/page-table.js": {
+    "file": "assets/page-table-BFju5-2X.js",
+    "name": "page-table",
+    "src": "resources/js/back/page-table.js",
+    "isEntry": true,
+    "imports": [
+      "resources/js/back/table.js",
+      "_dashboard-Bdu29zxX.js",
+      "resources/js/back/crud.js",
+      "resources/js/back/datatable-init.js",
+      "_config-CwI8Qv8x.js"
+    ]
+  },
+  "resources/js/back/pages/chat.js": {
+    "file": "assets/chat-Bn1mDyUI.js",
+    "name": "chat",
+    "src": "resources/js/back/pages/chat.js",
+    "isEntry": true,
+    "imports": [
+      "resources/js/back/crud.js",
+      "_config-CwI8Qv8x.js",
+      "_dashboard-Bdu29zxX.js"
+    ]
+  },
+  "resources/js/back/pages/login.js": {
+    "file": "assets/login-uE1P6z3k.js",
+    "name": "login",
+    "src": "resources/js/back/pages/login.js",
+    "isEntry": true,
+    "imports": [
+      "resources/js/back/crud.js",
+      "_dashboard-Bdu29zxX.js",
+      "_config-CwI8Qv8x.js"
+    ]
+  },
+  "resources/js/back/pages/settings.js": {
+    "file": "assets/settings-BBVNIOVI.js",
+    "name": "settings",
+    "src": "resources/js/back/pages/settings.js",
+    "isEntry": true,
+    "imports": [
+      "resources/js/back/crud.js",
+      "_dashboard-Bdu29zxX.js",
+      "_config-CwI8Qv8x.js"
+    ]
+  },
+  "resources/js/back/table.js": {
+    "file": "assets/table-CfHrUUYc.js",
+    "name": "table",
+    "src": "resources/js/back/table.js",
+    "isEntry": true,
+    "imports": [
+      "resources/js/back/crud.js",
+      "resources/js/back/datatable-init.js",
+      "_dashboard-Bdu29zxX.js",
+      "_config-CwI8Qv8x.js"
+    ]
+  }
+}

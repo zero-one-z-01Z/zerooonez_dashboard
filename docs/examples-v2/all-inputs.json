@@ -1,0 +1,326 @@
+{
+  "schema_version": 2,
+  "resource": "demo_all_inputs",
+  "model": "DemoAllInput",
+  "controller": "DemoAllInputController",
+  "permission": "demo_all_input",
+  "title_key": "demo_all_inputs",
+  "title_ar": "مكتبة جميع الحقول",
+  "title_en": "All input types",
+  "create_model": true,
+  "timestamps": true,
+  "page_type": "table",
+  "capabilities": {
+    "create": true,
+    "update": true,
+    "delete": true,
+    "delete_all": false,
+    "export": false,
+    "filters": false,
+    "show": false
+  },
+  "fields": [
+    {
+      "name": "name",
+      "column": "name",
+      "input": "text",
+      "type": "text",
+      "label_key": "demo_all_name",
+      "label_ar": "الاسم",
+      "label_en": "Name",
+      "validation": {
+        "required": true
+      },
+      "language": "both"
+    },
+    {
+      "name": "description",
+      "column": "description",
+      "input": "textarea",
+      "type": "textarea",
+      "label_key": "demo_all_description",
+      "label_ar": "الوصف",
+      "label_en": "Description",
+      "validation": {
+        "required": false
+      },
+      "language": "both"
+    },
+    {
+      "name": "status",
+      "column": "status",
+      "input": "single",
+      "type": "text",
+      "label_key": "demo_all_status",
+      "label_ar": "الحالة",
+      "label_en": "Status",
+      "validation": {
+        "required": false
+      },
+      "items": [
+        {
+          "value": "draft",
+          "text_ar": "مسودة",
+          "text_en": "Draft",
+          "selected": true
+        },
+        {
+          "value": "ready",
+          "text_ar": "جاهز",
+          "text_en": "Ready",
+          "selected": false
+        }
+      ]
+    },
+    {
+      "name": "labels",
+      "column": "labels",
+      "input": "multi_select",
+      "type": "json",
+      "label_key": "demo_all_labels",
+      "label_ar": "الوسوم",
+      "label_en": "Labels",
+      "validation": {
+        "required": false
+      },
+      "storage": {
+        "strategy": "json"
+      },
+      "items": [
+        {
+          "value": "a",
+          "text_ar": "أ",
+          "text_en": "A"
+        }
+      ]
+    },
+    {
+      "name": "active",
+      "column": "active",
+      "input": "switch",
+      "type": "boolean",
+      "label_key": "demo_all_active",
+      "label_ar": "نشط",
+      "label_en": "Active",
+      "validation": {
+        "required": false
+      },
+      "default": false
+    },
+    {
+      "name": "source",
+      "column": "source",
+      "input": "hidden",
+      "type": "text",
+      "label_key": "demo_all_source",
+      "label_ar": "المصدر",
+      "label_en": "Source",
+      "validation": {
+        "required": false
+      },
+      "default": "dashboard"
+    },
+    {
+      "input": "empty"
+    },
+    {
+      "name": "image",
+      "column": "image",
+      "input": "image",
+      "type": "text",
+      "label_key": "demo_all_image",
+      "label_ar": "الصورة",
+      "label_en": "Image",
+      "validation": {
+        "required": false
+      },
+      "storage": {
+        "strategy": "media",
+        "disk": "public",
+        "directory": "demo_inputs"
+      },
+      "accepted_files": "image/jpeg,image/png",
+      "max_file_size": 2
+    },
+    {
+      "name": "document",
+      "column": "document",
+      "input": "file",
+      "type": "text",
+      "label_key": "demo_all_document",
+      "label_ar": "مستند",
+      "label_en": "Document",
+      "validation": {
+        "required": false
+      },
+      "storage": {
+        "strategy": "media",
+        "disk": "local",
+        "directory": "demo_inputs"
+      },
+      "accepted_files": "application/pdf",
+      "max_file_size": 5
+    },
+    {
+      "name": "images",
+      "column": "images",
+      "input": "upload_images",
+      "type": "json",
+      "label_key": "demo_all_images",
+      "label_ar": "الصور",
+      "label_en": "Images",
+      "validation": {
+        "required": false
+      },
+      "storage": {
+        "strategy": "media",
+        "relation": "images",
+        "deleted_key": "deleted_images"
+      },
+      "max_files": 14,
+      "max_file_size": 2,
+      "accepted_files": "image/jpeg,image/png"
+    },
+    {
+      "name": "preview",
+      "column": "preview",
+      "input": "image_preview",
+      "type": "text",
+      "label_key": "demo_all_preview",
+      "label_ar": "صورة محفوظة",
+      "label_en": "Saved image",
+      "validation": {
+        "required": false
+      },
+      "read_only": true,
+      "read_path": "image"
+    },
+    {
+      "name": "content",
+      "column": "content",
+      "input": "html",
+      "type": "text",
+      "label_key": "demo_all_content",
+      "label_ar": "المحتوى",
+      "label_en": "Content",
+      "validation": {
+        "required": false
+      },
+      "language": "both",
+      "storage": {
+        "strategy": "custom"
+      }
+    },
+    {
+      "name": "boundary",
+      "column": "boundary",
+      "input": "boundary",
+      "type": "json",
+      "label_key": "demo_all_boundary",
+      "label_ar": "الحدود",
+      "label_en": "Boundary",
+      "validation": {
+        "required": false
+      },
+      "storage": {
+        "strategy": "custom"
+      }
+    },
+    {
+      "name": "location",
+      "column": "location",
+      "input": "map",
+      "type": "json",
+      "label_key": "demo_all_location",
+      "label_ar": "الموقع",
+      "label_en": "Location",
+      "validation": {
+        "required": false
+      },
+      "lat_field": "latitude",
+      "lng_field": "longitude",
+      "storage": {
+        "strategy": "custom"
+      }
+    },
+    {
+      "name": "children",
+      "column": "children",
+      "input": "multiform",
+      "type": "json",
+      "label_key": "demo_all_children",
+      "label_ar": "الأبناء",
+      "label_en": "Children",
+      "validation": {
+        "required": false
+      },
+      "min_rows": 0,
+      "max_rows": 10,
+      "storage": {
+        "strategy": "children",
+        "relation": "children"
+      },
+      "inputs": [
+        {
+          "name": "name",
+          "column": "name",
+          "input": "text",
+          "type": "text",
+          "label_key": "demo_all_child_name",
+          "label_ar": "اسم الابن",
+          "label_en": "Child name",
+          "validation": {
+            "required": false
+          },
+          "language": "both"
+        },
+        {
+          "name": "photo",
+          "column": "photo",
+          "input": "image",
+          "type": "text",
+          "label_key": "demo_all_photo",
+          "label_ar": "صورة الابن",
+          "label_en": "Child image",
+          "validation": {
+            "required": false
+          },
+          "storage": {
+            "strategy": "media"
+          },
+          "max_file_size": 2
+        }
+      ]
+    },
+    {
+      "name": "permissions",
+      "column": "permissions",
+      "input": "permissions",
+      "type": "json",
+      "label_key": "demo_all_permissions",
+      "label_ar": "الصلاحيات",
+      "label_en": "Permissions",
+      "validation": {
+        "required": false
+      },
+      "allowed_groups": [
+        "demo_all_input"
+      ],
+      "storage": {
+        "strategy": "custom"
+      }
+    }
+  ],
+  "edit_mode": "same",
+  "edit_fields": [],
+  "columns": [],
+  "filters": [],
+  "actions": [],
+  "modals": [],
+  "sidebar": {
+    "mode": "root",
+    "icon": "fa-box",
+    "order": 20
+  },
+  "notes": "حزمة Agent توضح جميع الأنواع؛ ليست صفحة مولّدة أو خدمة حفظ مركبة منفّذة. طبّق سياسة ملكية الملفات والأبناء، وحدد مجموعات الصلاحية المسموحة في المشروع الفعلي."
+}

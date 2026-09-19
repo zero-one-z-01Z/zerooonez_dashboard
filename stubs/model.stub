@@ -1,0 +1,25 @@
+<?php
+
+namespace {{ model_namespace }};
+
+use Illuminate\Database\Eloquent\Model;
+
+/** موديل المورد المولّد؛ أضف العلاقات وقواعد العمل عند الحاجة. */
+class {{ model }} extends Model
+{
+    // اسم الجدول ثابت من resource وقت التوليد؛ أسماء الجداول لا تتغير بمجرد تعديل JSON.
+    protected $table = {{ table }};
+    // حدث هذه القائمة عند إضافة أو حذف حقول فعلية، مع JSON وMigration تعديل الجدول.
+    protected $fillable = {{ fillable }};
+    public $timestamps = {{ timestamps }};
+
+    /**
+     * يحدد تحويل قيم الأرقام وboolean والتواريخ عند القراءة والكتابة عبر Eloquent.
+     *
+     * @return array<string, string> casts ثابتة من لحظة التوليد؛ حدثها مع تغييرات أنواع الحقول.
+     */
+    protected function casts(): array
+    {
+        return {{ casts }};
+    }
+}

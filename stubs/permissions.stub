@@ -1,0 +1,21 @@
+<?php
+
+namespace Database\Seeders;
+
+use ZeroOneZ\Dashboard\Contracts\PermissionStore;
+use Illuminate\Database\Seeder;
+
+class {{ model }}DashboardPermissionsSeeder extends Seeder
+{
+    /**
+     * يضيف مفاتيح view وcreate وupdate وdelete المفقودة، ويترك المفاتيح الموجودة كما هي.
+     *
+     * @return void يكتب جدول permissions فقط؛ منح الصلاحيات للأدوار يتم من محرر الأدوار.
+     */
+    public function run(): void
+    {
+        foreach (['view', 'create', 'update', 'delete'] as $action) {
+            app(PermissionStore::class)->firstOrCreate($action.{{ permission_suffix }});
+        }
+    }
+}

@@ -1,0 +1,21 @@
+{
+  "javascript": {
+    "source_count": 53,
+    "desktop_count": 53,
+    "missing_on_desktop": [],
+    "extra_on_desktop": [],
+    "different_hashes": []
+  },
+  "build": {
+    "source_count": 11,
+    "desktop_count": 15,
+    "missing_on_desktop": [],
+    "extra_on_desktop": [
+      "public/build/assets/crud-0L7_O5gv.js",
+      "public/build/assets/item-table-Be85JYFi.js",
+      "public/build/assets/page-table-Dn9K25s3.js",
+      "public/build/assets/table-KX4zkzwD.js"
+    ],
+    "different_hashes": []
+  }
+}

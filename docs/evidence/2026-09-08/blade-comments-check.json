@@ -1,0 +1,21 @@
+{
+  "comparison": "Remove Blade comments and blank lines only; preserve all remaining characters and indentation.",
+  "files": [
+    {
+      "file": "resources/views/dashboard/screen/item_view.blade.php",
+      "matches": true
+    },
+    {
+      "file": "resources/views/dashboard/screen/table_view.blade.php",
+      "matches": true
+    },
+    {
+      "file": "resources/views/dashboard/admin-components/all-modals.blade.php",
+      "matches": true
+    },
+    {
+      "file": "resources/views/dashboard/admin-components/modal-content.blade.php",
+      "matches": true
+    }
+  ]
+}

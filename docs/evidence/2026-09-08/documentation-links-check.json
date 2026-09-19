@@ -1,0 +1,6 @@
+{
+  "method": "Checks local link file targets, excluding fenced and inline code; does not validate section anchors.",
+  "documents": 13,
+  "links_checked": 261,
+  "missing_targets": []
+}

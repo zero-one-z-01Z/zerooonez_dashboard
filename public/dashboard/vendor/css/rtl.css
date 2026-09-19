@@ -1,0 +1,7 @@
+﻿.form-select {
+    background-position: left .9375rem center;
+}
+
+.form-select:focus, .form-select:focus-within, .was-validated .form-select:invalid, .was-validated .form-select:valid, .form-select.is-invalid, .form-select.is-valid {
+    background-position: left calc(.9375rem - 1px) center;
+}

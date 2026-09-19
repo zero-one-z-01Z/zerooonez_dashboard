@@ -1,0 +1,22 @@
+<?php
+
+namespace {{ controller_namespace }};
+
+/**
+ * صفحة مولّدة؛ ملف dashboard/resources/{{ resource }}.json يحدد واجهتها.
+ * تعديل العناوين والظهور والتحقق ينعكس مباشرة؛ إضافة حقل أو تغيير نوعه يحتاج أيضا
+ * تحديث fillable وcasts في الموديل وMigration مناسب لقاعدة البيانات.
+ * يمكن تخصيص عمليات الكلاس الأب عند وجود علاقات أو قواعد عمل إضافية.
+ */
+class {{ model }}Controller extends \{{ base_controller }}
+{
+    /**
+     * يقرأ التعريف المطبّع من ملف المورد بدل تكراره بين النماذج والجدول والقائمة.
+     *
+     * @return array<string, mixed> وصف المورد المحفوظ داخل مثيل الكنترولر خلال الطلب.
+     */
+    protected function definition(): array
+    {
+        return $this->loadDefinition({{ resource_literal }});
+    }
+}

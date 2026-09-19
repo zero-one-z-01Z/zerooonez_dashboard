@@ -1,0 +1,37 @@
+{
+    "$schema": "https://getcomposer.org/schema.json",
+    "name": "zeroonez/zerooonez-dashboard",
+    "description": "Reusable internal Laravel dashboard runtime, builder and scaffolding toolkit.",
+    "type": "library",
+    "license": "proprietary",
+    "require": {
+        "php": ">=8.2",
+        "laravel/framework": "^12.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^10.0",
+        "phpunit/phpunit": "^11.5"
+    },
+    "autoload": {
+        "psr-4": {"ZeroOneZ\\Dashboard\\": "src/"},
+        "files": ["src/helpers.php"]
+    },
+    "autoload-dev": {
+        "psr-4": {"ZeroOneZ\\Dashboard\\Tests\\": "tests/"}
+    },
+    "extra": {
+        "laravel": {
+            "providers": ["ZeroOneZ\\Dashboard\\DashboardServiceProvider"]
+        }
+    },
+    "scripts": {
+        "test": "phpunit",
+        "test:syntax": "find src routes config tests -name '*.php' -print0 | xargs -0 -n1 php -l"
+    },
+    "config": {
+        "sort-packages": true,
+        "allow-plugins": {"php-http/discovery": true}
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}

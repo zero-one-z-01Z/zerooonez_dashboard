@@ -1,0 +1,349 @@
+
+> test:dashboard
+> node --test tests/JavaScript/*.test.js
+
+TAP version 13
+# Subtest: builder API sends JSON with CSRF and preserves backend validation details
+ok 1 - builder API sends JSON with CSRF and preserves backend validation details
+  ---
+  duration_ms: 5.288594
+  ...
+# Subtest: field editor uses control values, returns typed booleans, and excludes imported extra keys
+ok 2 - field editor uses control values, returns typed booleans, and excludes imported extra keys
+  ---
+  duration_ms: 1.702471
+  ...
+# Subtest: removing a field renumbers the remaining rows and invalidates the preview
+ok 3 - removing a field renumbers the remaining rows and invalidates the preview
+  ---
+  duration_ms: 0.763062
+  ...
+# Subtest: invalid field counts are rejected before replacing existing editor content
+ok 4 - invalid field counts are rejected before replacing existing editor content
+  ---
+  duration_ms: 5.111119
+  ...
+# Subtest: preview files, next steps and status treat hostile paths and source contents as text
+ok 5 - preview files, next steps and status treat hostile paths and source contents as text
+  ---
+  duration_ms: 1.366408
+  ...
+# Subtest: real builder entry discards stale preview responses and sends only the reviewed definition/fingerprint
+ok 6 - real builder entry discards stale preview responses and sends only the reviewed definition/fingerprint
+  ---
+  duration_ms: 22.837204
+  ...
+# Subtest: newer edit GET wins over an older same-form request and the older completion cannot hide its loader
+ok 7 - newer edit GET wins over an older same-form request and the older completion cannot hide its loader
+  ---
+  duration_ms: 5.281361
+  ...
+# Subtest: a late GET cannot reset or populate a replacement form with the same id or clear another Dropzone
+ok 8 - a late GET cannot reset or populate a replacement form with the same id or clear another Dropzone
+  ---
+  duration_ms: 1.003686
+  ...
+# Subtest: cancelling one modal host aborts only its edit GETs, preserving another form request and POST mutations
+ok 9 - cancelling one modal host aborts only its edit GETs, preserving another form request and POST mutations
+  ---
+  duration_ms: 1.279699
+  ...
+# Subtest: cancellation accepts a concrete detached form and ignores missing hosts or absent forms
+ok 10 - cancellation accepts a concrete detached form and ignores missing hosts or absent forms
+  ---
+  duration_ms: 0.568801
+  ...
+# Subtest: current GET resets only the uploader belonging to its own form
+ok 11 - current GET resets only the uploader belonging to its own form
+  ---
+  duration_ms: 0.942309
+  ...
+# Subtest: custom mutation completes but its old success does not reset or reload a replaced tab
+ok 12 - custom mutation completes but its old success does not reset or reload a replaced tab
+  ---
+  duration_ms: 119.390944
+  ...
+# Subtest: custom mutation success uses its captured table and uploader while its form still exists
+ok 13 - custom mutation success uses its captured table and uploader while its form still exists
+  ---
+  duration_ms: 76.663619
+  ...
+# Subtest: year chart maps both server series and theme settings without mutating source data
+ok 14 - year chart maps both server series and theme settings without mutating source data
+  ---
+  duration_ms: 3.994101
+  ...
+# Subtest: circle and daily charts render supplied data and preserve update payload shapes
+ok 15 - circle and daily charts render supplied data and preserve update payload shapes
+  ---
+  duration_ms: 1.843153
+  ...
+# Subtest: missing optional chart elements do not construct ApexCharts instances
+ok 16 - missing optional chart elements do not construct ApexCharts instances
+  ---
+  duration_ms: 0.349677
+  ...
+# Subtest: month request keeps endpoint/body contract and updates categories, series and subtitle
+ok 17 - month request keeps endpoint/body contract and updates categories, series and subtitle
+  ---
+  duration_ms: 14.184995
+  ...
+# Subtest: crud entry publishes the full Blade API before any ready callback and delegates declarative events
+ok 18 - crud entry publishes the full Blade API before any ready callback and delegates declarative events
+  ---
+  duration_ms: 27.582091
+  ...
+# Subtest: AJAX sends FormData unchanged with deferred execution and honors explicit callbacks/options
+ok 19 - AJAX sends FormData unchanged with deferred execution and honors explicit callbacks/options
+  ---
+  duration_ms: 184.365901
+  ...
+# Subtest: Laravel validation errors target bracketed repeated-row names and reveal the first field
+ok 20 - Laravel validation errors target bracketed repeated-row names and reveal the first field
+  ---
+  duration_ms: 1.273966
+  ...
+# Subtest: population expands translations, checks explicit booleans and triggers plain select changes
+ok 21 - population expands translations, checks explicit booleans and triggers plain select changes
+  ---
+  duration_ms: 0.904148
+  ...
+# Subtest: language input allows the requested alphabet and editing keys while rejecting unsupported characters
+ok 22 - language input allows the requested alphabet and editing keys while rejecting unsupported characters
+  ---
+  duration_ms: 0.820416
+  ...
+# Subtest: validation rules preserve comparison boundaries and optional predecessor dates
+ok 23 - validation rules preserve comparison boundaries and optional predecessor dates
+  ---
+  duration_ms: 0.751826
+  ...
+# Subtest: formatters preserve URL placeholders, origin checks and local date formatting
+ok 24 - formatters preserve URL placeholders, origin checks and local date formatting
+  ---
+  duration_ms: 2.175416
+  ...
+# Subtest: modal forms inserted after registration reset once, keep unrelated listeners, and do not reset other modals
+ok 25 - modal forms inserted after registration reset once, keep unrelated listeners, and do not reset other modals
+  ---
+  duration_ms: 5.972333
+  ...
+# Subtest: a nested modal hide does not clear forms belonging to an outer modal
+ok 26 - a nested modal hide does not clear forms belonging to an outer modal
+  ---
+  duration_ms: 0.862526
+  ...
+# Subtest: late custom switches dispatch one payload after repeated registration and leave ordinary switches alone
+ok 27 - late custom switches dispatch one payload after repeated registration and leave ordinary switches alone
+  ---
+  duration_ms: 2.886144
+  ...
+# Subtest: declarative actions on forms added later run once and preserve third-party event listeners
+ok 28 - declarative actions on forms added later run once and preserve third-party event listeners
+  ---
+  duration_ms: 0.739419
+  ...
+# Subtest: permission select-all and individual changes stay in the same late-added form, even with repeated toggle IDs
+ok 29 - permission select-all and individual changes stay in the same late-added form, even with repeated toggle IDs
+  ---
+  duration_ms: 1.716801
+  ...
+# Subtest: generated declared image/logo/banner text and lng/lat numbers populate ordinary inputs without invoking specialized tools
+ok 30 - generated declared image/logo/banner text and lng/lat numbers populate ordinary inputs without invoking specialized tools
+  ---
+  duration_ms: 6.262015
+  ...
+# Subtest: generated boolean permissions field follows checkbox population for both on and off values
+ok 31 - generated boolean permissions field follows checkbox population for both on and off values
+  ---
+  duration_ms: 0.724154
+  ...
+# Subtest: legacy image population retains preview routing when metadata is absent or declares a different field
+ok 32 - legacy image population retains preview routing when metadata is absent or declares a different field
+  ---
+  duration_ms: 0.567596
+  ...
+# Subtest: malformed or unexpected field metadata falls back to legacy behavior without throwing
+ok 33 - malformed or unexpected field metadata falls back to legacy behavior without throwing
+  ---
+  duration_ms: 0.957236
+  ...
+# Subtest: populateForm uses supplied data.id including zero and only populates the identifier
+ok 34 - populateForm uses supplied data.id including zero and only populates the identifier
+  ---
+  duration_ms: 0.639304
+  ...
+# Subtest: custom switch POST serializes the explicit payload without a global event or temporary form
+ok 35 - custom switch POST serializes the explicit payload without a global event or temporary form
+  ---
+  duration_ms: 114.701451
+  ...
+# Subtest: custom switch bubbling reaches both listeners but produces exactly one payload; normal table switch uses its own handler
+ok 36 - custom switch bubbling reaches both listeners but produces exactly one payload; normal table switch uses its own handler
+  ---
+  duration_ms: 1.67036
+  ...
+# Subtest: booking date selection keeps its displayed dates and no longer opens a diagnostic alert
+ok 37 - booking date selection keeps its displayed dates and no longer opens a diagnostic alert
+  ---
+  duration_ms: 0.596066
+  ...
+# Subtest: save completed during opening closes after Bootstrap shown event and cleans its listeners
+ok 38 - save completed during opening closes after Bootstrap shown event and cleans its listeners
+  ---
+  duration_ms: 2.872063
+  ...
+# Subtest: already closed or absent modals need no timeout or Bootstrap operation
+ok 39 - already closed or absent modals need no timeout or Bootstrap operation
+  ---
+  duration_ms: 0.47481
+  ...
+# Subtest: the opening backdrop is also awaited before the modal gets its visible DOM attributes
+ok 40 - the opening backdrop is also awaited before the modal gets its visible DOM attributes
+  ---
+  duration_ms: 0.97691
+  ...
+# Subtest: page entry statically loads table dependencies and waits for the server JSON node at DOM readiness
+ok 41 - page entry statically loads table dependencies and waits for the server JSON node at DOM readiness
+  ---
+  duration_ms: 3.279259
+  ...
+# Subtest: page entry starts immediately when imported after DOMContentLoaded
+ok 42 - page entry starts immediately when imported after DOMContentLoaded
+  ---
+  duration_ms: 10.367161
+  ...
+# Subtest: item headers insert column titles as text and exactly match optional system columns
+ok 43 - item headers insert column titles as text and exactly match optional system columns
+  ---
+  duration_ms: 6.886667
+  ...
+# Subtest: item tab loader aborts stale requests and only commits the latest successful response
+ok 44 - item tab loader aborts stale requests and only commits the latest successful response
+  ---
+  duration_ms: 1.280144
+  ...
+# Subtest: an unsuccessful item request leaves the current table intact and reports the HTTP error
+ok 45 - an unsuccessful item request leaves the current table intact and reports the HTTP error
+  ---
+  duration_ms: 0.616678
+  ...
+# Subtest: item startup reads numeric internal filters and suppresses auto-start when there are no tabs
+ok 46 - item startup reads numeric internal filters and suppresses auto-start when there are no tabs
+  ---
+  duration_ms: 0.283801
+  ...
+# Subtest: an old endpoint without fragments cannot replace current fields or table configuration
+ok 47 - an old endpoint without fragments cannot replace current fields or table configuration
+  ---
+  duration_ms: 0.620495
+  ...
+# Subtest: read-only tabs replace previous CRUD forms with the empty server fragment
+ok 48 - read-only tabs replace previous CRUD forms with the empty server fragment
+  ---
+  duration_ms: 0.71693
+  ...
+# Subtest: configuration intersects permissions, supports open, maps filters, and preserves route contract
+ok 49 - configuration intersects permissions, supports open, maps filters, and preserves route contract
+  ---
+  duration_ms: 6.046389
+  ...
+# Subtest: a fresh AJAX tab definition clears previous optional filters and uploader state
+ok 50 - a fresh AJAX tab definition clears previous optional filters and uploader state
+  ---
+  duration_ms: 0.508081
+  ...
+# Subtest: validation keeps create, edit, and custom modal rules separate including multiform field names
+ok 51 - validation keeps create, edit, and custom modal rules separate including multiform field names
+  ---
+  duration_ms: 1.075734
+  ...
+# Subtest: Select2 request preserves parent key, child key, search, page and relation values
+ok 52 - Select2 request preserves parent key, child key, search, page and relation values
+  ---
+  duration_ms: 0.718656
+  ...
+# Subtest: Select2 required relations report missing values without leaking partial queries
+ok 53 - Select2 required relations report missing values without leaking partial queries
+  ---
+  duration_ms: 0.79366
+  ...
+# Subtest: Select2 response mapper preserves API pagination convention
+ok 54 - Select2 response mapper preserves API pagination convention
+  ---
+  duration_ms: 0.476076
+  ...
+# Subtest: request filters support DOM, variable sources, date pairs and optional override precedence
+ok 55 - request filters support DOM, variable sources, date pairs and optional override precedence
+  ---
+  duration_ms: 0.894649
+  ...
+# Subtest: action visibility requires a permitted alternative and every strict row condition
+ok 56 - action visibility requires a permitted alternative and every strict row condition
+  ---
+  duration_ms: 0.369801
+  ...
+# Subtest: row actions preserve custom modal dispatch attributes and hide unauthorized actions
+ok 57 - row actions preserve custom modal dispatch attributes and hide unauthorized actions
+  ---
+  duration_ms: 1.444368
+  ...
+# Subtest: column positions match tables with and without checkboxes or actions
+ok 58 - column positions match tables with and without checkboxes or actions
+  ---
+  duration_ms: 1.460506
+  ...
+# Subtest: nested column paths tolerate missing relations and retain numeric zero
+ok 59 - nested column paths tolerate missing relations and retain numeric zero
+  ---
+  duration_ms: 0.594051
+  ...
+# Subtest: text cells escape untrusted HTML while explicit rich-text cells retain their markup
+ok 60 - text cells escape untrusted HTML while explicit rich-text cells retain their markup
+  ---
+  duration_ms: 0.874876
+  ...
+# Subtest: URL replacement keeps trailing route/query content and handles zero identifiers
+ok 61 - URL replacement keeps trailing route/query content and handles zero identifiers
+  ---
+  duration_ms: 0.290546
+  ...
+# Subtest: export formats share the same formatter and accept numeric or empty cells
+ok 62 - export formats share the same formatter and accept numeric or empty cells
+  ---
+  duration_ms: 0.571721
+  ...
+# Subtest: legacy entry publishes every table API and dependency before readiness/DOMContentLoaded
+ok 63 - legacy entry publishes every table API and dependency before readiness/DOMContentLoaded
+  ---
+  duration_ms: 2.626469
+  ...
+# Subtest: actual engine initializes once, supports repeated setup, and starts a clean AJAX tab after destroy
+ok 64 - actual engine initializes once, supports repeated setup, and starts a clean AJAX tab after destroy
+  ---
+  duration_ms: 2.806193
+  ...
+# Subtest: switch updates use explicit data without implicit browser event or global temporary form
+ok 65 - switch updates use explicit data without implicit browser event or global temporary form
+  ---
+  duration_ms: 31.064025
+  ...
+# Subtest: record create/update preserve POST endpoints, id substitution and paging behavior
+ok 66 - record create/update preserve POST endpoints, id substitution and paging behavior
+  ---
+  duration_ms: 1.002119
+  ...
+# Subtest: required Dropzone checks the current form and appends only queued files with configured name
+ok 67 - required Dropzone checks the current form and appends only queued files with configured name
+  ---
+  duration_ms: 0.539007
+  ...
+1..67
+# tests 67
+# suites 0
+# pass 67
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 418.692135

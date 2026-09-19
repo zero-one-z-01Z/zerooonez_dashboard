@@ -1,0 +1,85 @@
+{
+  "status": "passed",
+  "checks": [
+    "Real plugins loaded: jQuery 3.7.1, DataTables 2.1.8, Bootstrap 5.3.5, jQuery Validate and Select2",
+    "Tab A installs one set of modals, Select2 and validation",
+    "Tab A create obeys real required validation and POSTs to A store",
+    "Tab A row edit opens, populates from GET and POSTs correct identifier",
+    "Custom modal retains its own form and action endpoint",
+    "Switch A→B while a modal is open cleans Bootstrap and replaces fields without duplicate IDs",
+    "Tab B create/edit use B fields and endpoints after switching",
+    "A→B→A works, and a stale A record GET cannot fill the B form",
+    "Stale tab responses are ignored and B remains the active schema",
+    "Failed tab HTTP request preserves the current table and forms",
+    "Late save response cannot reset the newly selected tab or its unsaved input",
+    "Fast create during Bootstrap opening closes the modal and backdrop",
+    "Fast custom save during Bootstrap opening also closes cleanly",
+    "Exactly eight save POSTs, no duplicate handlers, no uncaught browser errors"
+  ],
+  "writes": [
+    {
+      "path": "/api/a/store",
+      "values": {
+        "name": "A created"
+      }
+    },
+    {
+      "path": "/api/a/7/update",
+      "values": {
+        "id": "7",
+        "name": "A changed",
+        "category_id": "1"
+      }
+    },
+    {
+      "path": "/api/a/custom",
+      "values": {
+        "id": "7",
+        "note": "custom changed"
+      }
+    },
+    {
+      "path": "/api/b/store",
+      "values": {
+        "label": "B created",
+        "amount": "24"
+      }
+    },
+    {
+      "path": "/api/b/7/update",
+      "values": {
+        "id": "7",
+        "label": "B changed",
+        "amount": "32"
+      }
+    },
+    {
+      "path": "/api/b/store",
+      "values": {
+        "label": "late B save",
+        "amount": "99",
+        "fixture_delay": "1"
+      }
+    },
+    {
+      "path": "/api/a/store",
+      "values": {
+        "name": "A fast create"
+      }
+    },
+    {
+      "path": "/api/a/custom",
+      "values": {
+        "id": "7",
+        "note": "custom fast save"
+      }
+    }
+  ],
+  "versions": {
+    "jquery": "3.7.1",
+    "dataTables": "2.1.8",
+    "bootstrap": "5.3.5"
+  },
+  "finishedAt": "2026-09-07T23:21:55.484Z",
+  "headlessPageErrors": []
+}

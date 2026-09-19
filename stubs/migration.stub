@@ -1,0 +1,30 @@
+<?php
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+return new class extends Migration
+{
+    /**
+     * ينشئ جدول المورد ومعرفه والحقول التي ثبتتها المعاينة عند تشغيل migrate.
+     *
+     * @return void يغير بنية قاعدة البيانات؛ لا يستدعيه المولّد تلقائيا.
+     */
+    public function up(): void
+    {
+        Schema::create({{ table }}, function (Blueprint $table) {
+{{ columns }}
+        });
+    }
+
+    /**
+     * يحذف جدول المورد عند تنفيذ التراجع عن هذه Migration بما فيه سجلات الجدول.
+     *
+     * @return void ينفذ Schema::dropIfExists عند طلب rollback، ولا يستدعيه المولّد.
+     */
+    public function down(): void
+    {
+        Schema::dropIfExists({{ table }});
+    }
+};

@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json.schemastore.org/package.json",
+  "name": "@zeroonez/zerooonez-dashboard-assets",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "vite build && npm run manifest",
+    "dev": "vite",
+    "test": "node --test tests/JavaScript/*.test.js",
+    "manifest": "node scripts/generate-asset-manifest.mjs"
+  },
+  "devDependencies": {
+    "vite": "^6.2.4"
+  }
+}
